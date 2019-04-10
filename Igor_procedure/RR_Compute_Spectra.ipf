@@ -19,7 +19,7 @@
 			endif
 
 			// make waves and set variables.
-			variable /G temp=575.350
+			variable /G temp= 298.0
 			variable /G wavenumber=18789.9380
 		
 		 print "Folder (root:Params:RotnRamanIns)  generated. Please load the data files in the following folder. \r"
@@ -29,6 +29,7 @@
 	end
 
 //**********************************************************************************************************
+//	Define constants
 
 	constant k_PlanckConstant = 1.38064852e-23 // J/K
 	constant k_h = 6.626070040e-34 // J.s
@@ -111,7 +112,6 @@ function SumOfstates_H2 (T)
 
 function SumOfstates_HD (T)
 	variable T
-
 	// 	Argument
 	//	T	: temperature, Kelvin
 
@@ -182,7 +182,6 @@ function SumOfstates_HD (T)
 
 function SumOfstates_D2 (T)
 	variable T
-
 	// 	Argument
 	//	T	: temperature, Kelvin
 
@@ -251,7 +250,7 @@ function SumOfstates_D2 (T)
 
 function spectra_H2 ( T , nf_s, nf_as)   // for HYDROGEN
 	variable T , nf_s, nf_as
-
+	
 	//	Arguments
 	//	T		: temperature in Kelvin.
 	//	nf_s	: the last J state for stokes sides.
@@ -431,7 +430,6 @@ function spectra_HD(T, nf_s, nf_as)   // for hydrogen deuteride
 	normalize_wave_to_one( spectraHD )
 	specHD [ ][2]	= spectraHD[p]
 
-
 	end		//	
 
 //**********************************************************************************************************
@@ -532,6 +530,7 @@ function spectra_D2(T , nf_s, nf_as)   // for molecular deuterium
 
 //**********************************************************************************************************
 //**********************************************************************************************************
+//	Function to normalize a 1D wave using the max value in that wave
 
 function normalize_wave_to_one (wave_name)
 		wave wave_name
