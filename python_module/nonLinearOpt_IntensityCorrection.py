@@ -6,6 +6,8 @@ import sys
 import numpy
 from scipy import interpolate
 from scipy import integrate
+from scipy.optimize import leastsq
+
 #-------------------------------------------------------------------
 #********************************************************************
 
@@ -20,9 +22,24 @@ def residual(vars, x, data, eps_data):
 
     return (data-model) / eps_data
 
-from scipy.optimize import leastsq
+def residual_line(vars, x, data, error):
+    intercept = vars[0]
+    slope = vars[1]
+    
+    model = intercept + slope*x
+    
+    return (data-model) / error
 
-vars = [10.0, 0.2, 3.0, 0.007]
+
+def residual_quadratic(vars):
+    intercept = vars[0]
+    slope = vars[1]
+    
+    model = amp * sin(x*freq + phaseshift) * exp(-x*x*decay)
+    return (data-model) / eps_data
 
 
-out = leastsq(residual, vars, args=(x, data, eps_data))
+vars = [3, 4]
+
+
+out = leastsq(residual_line, vars, args=(x, data, error))
