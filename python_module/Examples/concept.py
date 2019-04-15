@@ -7,8 +7,9 @@
 # Load necessary modules
 import numpy as np
 import scipy.optimize as opt
-print("")
-print("***************************************************************")
+import matplotlib.pyplot as plt
+
+print("***************************************************************\n")
 
 #-------------------------------------------------------------------
 #********************************************************************
@@ -99,7 +100,8 @@ corrected = curve / correction_curve # perform correction to obtain the correcte
 
 print("***************************************************************")
 
-import matplotlib.pyplot as plt
+#********************************************************************
+# Plotting the data
 
 txt = ("*Generated from 'polDerivative.py' on the\
       \nGitHub Repository: RamanSpec_IntensityCalibration ")
