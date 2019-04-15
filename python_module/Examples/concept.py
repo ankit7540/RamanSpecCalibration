@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-"""Module describing the concept of the non-linear optimization scheme used to determine
-    the wavelength sensitivity of the spectrometer using a  polynomial as a model function"""
+"""Module describing the concept of the non-linear optimization scheme used to
+    determine the wavelength sensitivity of the spectrometer using a  polynomial
+    as a model function"""
 
 # Load necessary modules
 import numpy as np
@@ -40,11 +41,11 @@ ratio_et = np.zeros(position_pos.shape)      # ratio of yval , curve / true
 
 for i in range(len(position_pos)):
 
-    ratio_true[i] = (np.interp(position_pos[i], xdata, ydata)) / (np.interp(position_neg[i],\
-                   xdata, ydata))
+    ratio_true[i] = (np.interp(position_pos[i], xdata, ydata)) /  \
+    (np.interp(position_neg[i], xdata, ydata))
 
-    ratio_curve[i] = (np.interp(position_pos[i], xdata, curve)) / (np.interp(position_neg[i],\
-                   xdata, curve))
+    ratio_curve[i] = (np.interp(position_pos[i], xdata, curve)) / \
+    (np.interp(position_neg[i], xdata, curve))
     ratio_et[i] = ratio_curve[i] / ratio_true[i]
 
 
@@ -54,9 +55,10 @@ print("Number of pairs of data points used :", len(ratio_et))
 #********************************************************************
 
 def residual(param):
-    '''Function which computes the difference between the ratio of the 'curve' to the true
-    given as 'ydata'  with that from  the function describing the perturbation. Here it is modeled
-    as a quadratic function of the type, ( 1+ c1*x + c2*x**2 ) '''
+    '''Function which computes the difference between the ratio of the 'curve'
+    to the true given as 'ydata'  with that from  the function describing the
+    perturbation. Here it is modeled as a quadratic function of
+    the type, ( 1+ c1*x + c2*x**2 ) '''
 
     c1 = param[0]
     c2 = param[1]
@@ -76,7 +78,8 @@ print("***************************************************************")
 
 param_init = np.array([-0.0125, -0.001])
 print("Testing the residual function with data")
-print("Initial coef :  k1={0}, k2={1} output = {2}".format(-0.014, -0.001, (residual(param_init))))
+print("Initial coef :  k1={0}, k2={1} output = {2}".format(-0.014, -0.001,\
+      (residual(param_init))))
 
 print("***************************************************************")
 
@@ -92,7 +95,7 @@ print("\nOptimized result : k1={0}, k2={1} ".format(round(k1, 6), round(k2, 6)))
 
 correction_curve = (1+k1* xdata +k2* (xdata**2))  # generate the correction curve
 
-corrected = curve / correction_curve     # perform correction to obtain the corrected array
+corrected = curve / correction_curve # perform correction to obtain the corrected array
 
 print("***************************************************************")
 
@@ -119,9 +122,10 @@ plt.grid(True)
 ax0.minorticks_on()
 ax0.tick_params(which='minor', right='on')
 ax0.tick_params(axis='y', labelleft='on', labelright='on')
-plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey", transform=plt.gcf().transFigure)
-plt.legend(('true', 'perturbed', 'correction_curve (from optimization)', 'corrected'),\
-           loc='upper left')
+plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey", \
+         transform=plt.gcf().transFigure)
+plt.legend(('true', 'perturbed', 'correction_curve (from optimization)',\
+            'corrected'), loc='upper left')
 
 #********************************************************************
 
@@ -130,15 +134,16 @@ xaxd = np.array([1, 2, 3, 4, 5, 6])
 interp_fit = np.zeros(position_pos.shape)
 
 for i in range(len(position_pos)):
-    interp_fit[i] = (np.interp(position_pos[i], xdata, corrected)) /(np.interp(position_neg[i], \
-                   xdata, corrected))
+    interp_fit[i] = (np.interp(position_pos[i], xdata, corrected)) /\
+    (np.interp(position_neg[i], xdata, corrected))
 #********************************************************************
 
 # FIGURE 1 INITIALIZED
 
 plt.figure(1)
 ax0 = plt.axes()
-plt.title('Ratio of y-values sampled  at the xaxis\n position in positive and negative region')
+plt.title('Ratio of y-values sampled  at the xaxis\n position in positive \
+          and negative region')
 plt.legend(loc='upper left')
 
 plt.plot(xaxd, ratio_true, 'ro-', linewidth=4.5)
@@ -158,7 +163,8 @@ plt.legend(('ratio_true',\
             'ratio_curve (perutbed)',\
             'ratio_corrected'), loc='upper left')
 
-plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey", transform=plt.gcf().transFigure)
+plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey",\
+         transform=plt.gcf().transFigure)
 
 
 #********************************************************************
