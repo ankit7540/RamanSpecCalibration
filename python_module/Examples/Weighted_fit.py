@@ -86,7 +86,7 @@ err_neg = np.array([noise[95], noise[85], noise[75], noise[65], noise[50] ,\
 
 # ------------------------
 
-sigma = (y_pos / y_neg)  * ((err_pos/y_pos)**2)+((err_neg/y_neg)**2)
+sigma = (curve_pos / curve_neg)  * ((err_pos/curve_pos)**2)+((err_neg/ curve_neg)**2)
 weight = 1/(sigma**2)
 
 #print(weight)
