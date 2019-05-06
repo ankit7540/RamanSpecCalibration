@@ -8,7 +8,7 @@ Set of functions in Python and IgorPro's scripting language for the determinatio
  
  - Stokes and anti-Stokes intensity data from measured rotational Raman spectra of H<sub>2</sub>, HD and D<sub>2</sub> (and O<sub>2</sub>) if available.
 
-| Ji | Expt_Stokes/antiStokes intensity | Theory_Stokes/antiStokes intensity | Stokes_Freq | anti-Stokes freq | weight |
+| Ji | Experimental (Stokes/antiStokes intensity) | Theoretical (Stokes/antiStokes intensity) | Stokes_Freq | anti-Stokes freq | weight |
 |----|----------------------------------|-------|-----------------|-------------|-----------------|
 |    |                                  |       |                 |             |                 |
 |    |                                  |       |                 |             |                 |
