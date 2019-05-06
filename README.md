@@ -12,6 +12,7 @@ Set of functions in Python and IgorPro's scripting language for the determinatio
 |----|----------------------------------|-------|-----------------|-------------|-----------------|
 |    |                                  |       |                 |             |                 |
 |    |                                  |       |                 |             |                 |
+For  O<sub>2</sub> the  intensity ratios are for the S1- and O1-branch insted of the Stokes and  anti-Stokes bands.
 
 
 ## Available programs
