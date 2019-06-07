@@ -6,7 +6,7 @@ Set of functions in Python and IgorPro's scripting language for the determinatio
 Refer to the following research papers for the principle. 
 
 ## Input data required
- - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1<\sup>, transition frequency (anti-Stokes) in cm<sup>-1<\sup> and the weight (used for fit)
+ - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1</sup>, transition frequency (anti-Stokes) in cm<sup>-1</sup> and the weight (used for fit)
  - All of the above correspond to pair of observed bands originating from a common rotational state. For several such pairs the data is to be structured in the following format in a txt file (without header).
 
 | Ji | Experimental (Stokes/antiStokes intensity) | Theoretical (Stokes/antiStokes intensity) | Stokes_Freq | anti-Stokes freq | weight |
@@ -37,5 +37,5 @@ Clone the repository or download the zip file. As per your choice of the program
 
 ## Credits
 Non-linear optimization in SciPy : 
-Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58 
+    Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58 
 
