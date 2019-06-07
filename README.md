@@ -1,6 +1,6 @@
 # RamanSpec : IntensityCalibration
 
-Set of functions in Python and IgorPro's scripting language for the determination of the the wavelength dependent sensitivity of the Raman spectrometer for intensity calibration. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD and D<sub>2</sub> (and O<sub>2</sub>) if available. Programs in Python and IgorPro are independent and perform the same job. The main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. An independent validation of the obtained sensitivity should be done for a measure of accuracy. 
+Set of functions in Python and IgorPro's scripting language for the determination of the the wavelength dependent sensitivity of the Raman spectrometer for intensity calibration. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD, D<sub>2</sub>, N<sub>2</sub> and O<sub>2</sub>. Programs in Python and IgorPro are independent and perform the same job. The main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. An independent validation of the obtained sensitivity should be done for a measure of accuracy. 
 
 ## Principle
 Refer to the following research papers for the principle. 
@@ -14,7 +14,7 @@ Refer to the following research papers for the principle.
 |    |                                  |       |                 |             |                 |
 |    |                                  |       |                 |             |                 |
 
-*For  O<sub>2</sub> the  intensity ratios are for the S1- and O1-branch insted of the Stokes and  anti-Stokes bands.*
+*For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions. the  intensity ratios are for the S1- and O1-branch insted of the Stokes and  anti-Stokes bands.*
 
 See specific program's readme regarding the use of the above strucutured data in the program for fit. 
 
