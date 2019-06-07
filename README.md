@@ -14,14 +14,14 @@ Refer to the following research papers for the principle.
 |    |                                  |       |                 |             |                 |
 |    |                                  |       |                 |             |                 |
 
-*For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions. the  intensity ratios are for the S1- and O1-branch insted of the Stokes and  anti-Stokes bands.*
+*For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions.*
 
 See specific program's readme regarding the use of the above strucutured data in the program for fit. 
 
 ## Available programs
  - Set of Igor Procedures
  - A Python module 
-for performing non-linear fit on the above mentioned data set to obtain the wavelength dependent sensitivity. Additionaly, program to compute the theoretical pure rotational Raman spectra is also included.
+for performing non-linear fit on the above mentioned data set to obtain the wavelength dependent sensitivity. Additionaly, programs to compute the theoretical pure rotational Raman spectra (for H<sub>2</sub>, HD and D<sub>2</sub>) are also included.
 
  
 ## Usage
@@ -37,5 +37,5 @@ Clone the repository or download the zip file. As per your choice of the program
 
 ## Credits
 Non-linear optimization in SciPy : 
-    Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58 
+ - Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58 
 
