@@ -7,7 +7,7 @@ Refer to the following research papers for the principle.
 
 ## Input data required
  - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1</sup>, transition frequency (anti-Stokes) in cm<sup>-1</sup> and the weight (used for fit)
- - All of the above correspond to pair of observed bands originating from a common rotational state. For several such pairs the data is to be structured in the following format in a txt file (without header).
+ - All of the above correspond to pair of observed bands originating from a common rotational state.
 
 *For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions.*
 
