@@ -7,6 +7,7 @@ Set of functions in Python and IgorPro's scripting language for the wavenumber (
  - For intensity calibration, the main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. The output is a curve extrapolated to same dimension as required by user for intensity calibration. An independent validation of the obtained sensitivity should be done for a measure of accuracy.
 
 ## Principle
+
 Refer to the following research papers for the principle.
 
 **Wavenumber calibration**
