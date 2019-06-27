@@ -20,7 +20,7 @@ York, 2000.
   - H. Hamaguchi, I. Harada, T. Shimanouchi, Chem. Lett. 1974, 3, 1405.
 
 ## Input data required
-*Wavenumber calibration*
+**Wavenumber calibration**
  - List of band positions of rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub> and rotational-vibrational Raman spectra of O<sub>2</sub>.
 *Intensity calibration*
  - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1</sup>, transition frequency (anti-Stokes) in cm<sup>-1</sup> and the weight (used for fit)
