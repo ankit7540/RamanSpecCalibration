@@ -6,7 +6,9 @@ This module includes three files, `wavenumber_cal.py`,  `wavelength_sensivity_fi
 
 `wavelength_sensivity_fit.py` : It accepts the data of experimental rotational Raman intensity (from common rotational state) for and performing a fit to determine the coefficients of a polynomial representing the wavelength dependent sensitivity.
 
-`compute_spectra.py` : This is an independent module which imports energy state data (for H<sub>2</sub>, HD and D<sub>2</sub>) along with ratio of polarizability anisotropy matrix (at 532.2 nm) elements to compute the theoretical rotational Raman spectra of these gases. Temperature is included for Boltzmann population using which observable Raman spectra can be modeled. For obtaining the ratio of theoretical Raman intensities originating from a common rotational state (required for the `wavelength_sensivity_fit.py` module ), a function is included  here which simply takes the ratio of the intensities of the individual bands. (For matrix elements of polarizability anisotropy at other wavelengths refer to this GitHub repository <https://github.com/ankit7540/H2-PolarizabilityMatrixElements> and research paper <https://aip.scitation.org/doi/abs/10.1063/1.5011433>.)
+`compute_spectra.py` : This is an independent module which imports energy state data (for H<sub>2</sub>, HD and D<sub>2</sub>) along with ratio of polarizability anisotropy matrix (at 532.2 nm) elements to compute the theoretical rotational Raman spectra of these gases. Temperature is included for Boltzmann population using which observable Raman spectra can be modeled. For obtaining the ratio of theoretical Raman intensities originating from a common rotational state (required for the `wavelength_sensivity_fit.py` module ), a function is included  here which simply takes the ratio of the intensities of the individual bands. 
+
+For matrix elements of polarizability anisotropy for H<sub>2</sub>, HD and D<sub>2</sub>, at other wavelengths refer to this GitHub repository (<https://github.com/ankit7540/H2-PolarizabilityMatrixElements>) and research paper (<https://aip.scitation.org/doi/abs/10.1063/1.5011433>).
 
 
 Requirements
