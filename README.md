@@ -8,25 +8,29 @@ Set of functions in Python and IgorPro's scripting language for the wavenumber (
 
 ## Principle
 Refer to the following research papers for the principle.
-*Wavenumber calibration*
+
+**Wavenumber calibration**
+
   -  S. B. Kim, R. M. Hammaker, W. G. Fateley, Appl. Spectrosc. 1986, 40, 412.
   - H. Hamaguchi, Appl. Spectrosc. Rev. 1988, 24, 137.
   - R. L. McCreery, Raman Spectroscopy for Chemical Analysis, John Wiley & Sons, New
 York, 2000.
   - N. C. Craig, I. W. Levin, Appl. Spectrosc. 1979, 33, 475.
   - H. Hamaguchi, Appl. Spectrosc. Rev. 1988, 24, 137.
-*Intensity calibration*
+
+**Intensity calibration**
+
   - H. Okajima, H. Hamaguchi, J. Raman Spectrosc. 2015, 46, 1140.
   - H. Hamaguchi, I. Harada, T. Shimanouchi, Chem. Lett. 1974, 3, 1405.
 
 ## Input data required
 **Wavenumber calibration**
- - List of band positions of rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub> and rotational-vibrational Raman spectra of O<sub>2</sub>.
-*Intensity calibration*
- - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1</sup>, transition frequency (anti-Stokes) in cm<sup>-1</sup> and the weight (used for fit)
- - All of the above correspond to pair of observed bands originating from a common rotational state.
 
-*For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions.*
+ - List of band positions and error (in pixels) of rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub> and rotational-vibrational Raman spectra of O<sub>2</sub>.
+
+**Intensity calibration**
+
+ - List of all data required : rotational state (J), experimental band area ratio (Stokes/ anti-Stokes), theoretical band area ratio (Stokes/anti-Stokes), transition frequency (Stokes) in cm<sup>-1</sup>, transition frequency (anti-Stokes) in cm<sup>-1</sup> and the weight (used for fit). For  O<sub>2</sub>, when using the vibration-rotation transitions (S1- and O1-branch), include the data and the frequencies for these transitions. All of the above correspond to pair of observed bands originating from a common rotational state.
 
 See specific program's readme regarding the use of the above data in the program for fit.
 
@@ -44,11 +48,14 @@ Clone the repository or download the zip file. As per your choice of the program
 
 ## Comments
 
- - On convergence of the minimization scheme : The convergence of the optimization has been tested with artificial and actual data giving expected results. However, in certain cases convergence in the minimization may not be achieved based on the specific data set and the error in the intensity.
+ - On convergence of the minimization scheme in intensity calibration : The convergence of the optimization has been tested with artificial and actual data giving expected results. However, in certain cases convergence in the minimization may not be achieved based on the specific data set and the error in the intensity.
 
  - Accuracy of the calibration : It is highly suggested to perform an independent validation of the intensity calibration. This validation can be using anti-Stokes to Stokes intensity for determining the sample's temperature (for checking the accuracy of wavelength sensitivity correction) and calculating the depolarization ratio from spectra (for checking the polarization dependent sensitivity correction).
 
 
 ## Credits
-Non-linear optimization in SciPy :
- - Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58
+*Non-linear optimization in SciPy* :  Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58
+
+*Orthogonal Distance Regression as used in IgorPro and SciPy* : i) P. Boggs, R. Byrd, R. Schnabel, SIAM J. Sci. Comput. 1987, 8, 1052. ii) P. T. Boggs, J. R. Donaldson, R. h. Byrd, R. B. Schnabel, ACM Trans. Math. Softw.
+1989, 15, 348.
+16 iii) J. W. Zwolak, P. T. Boggs, L. T. Watson, ACM Trans. Math. Softw. 2007, 33, 27.
