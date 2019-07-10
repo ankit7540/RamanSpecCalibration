@@ -1,6 +1,6 @@
-# IgorPro module for Intensity calibration
+# Igor procedures for calibration
 
-This module includes two file having several functions each, `RamanCalibration.ipf`, `compute_spectra.ipf`
+Two procedure file having several functions each, `RamanCalibration.ipf`, `compute_spectra.ipf` are included.
 
 `RamanCalibration.ipf` : Includes two major functions for wavenumber and intensity calibration. For wavenumber calibration : Data on the band positions in pixels with the uncertainties, as waves in the Igor experiment. Core program is just fitting the pixel with the reference wavelength data. The reference data in already included in the procedure with the error. For intensity calibration : Data on the band intensities and frequencies from common rotational states for different gas species arranged in a  predefined way as 2D waves. See **Usage** section for details.
 
