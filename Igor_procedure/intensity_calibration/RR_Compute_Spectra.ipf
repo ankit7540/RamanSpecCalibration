@@ -468,7 +468,6 @@ function spectra_D2(T , nf_s, nf_as)   // for molecular deuterium
 
 	//	sum of states for the temperature
 	sos = SumOfstates_D2(T)
-	print /d (sos)
 
 	// Stokes bands
 	for (i1=0; i1<( nf_s +1) ; i1=i1+1)
