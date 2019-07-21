@@ -30,7 +30,8 @@ Output
 -------------
 
 
-```Sum of state for  H2 at 333 K :  8.547700236069472
+```
+ Sum of state for  H2 at 333 K :  8.547700236069472
  Sum of state for  HD at 375 K :  6.220035416830953
  Sum of state for  D2 at 298 K :  32.86935389137424
 
