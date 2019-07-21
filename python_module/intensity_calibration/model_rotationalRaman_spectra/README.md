@@ -19,6 +19,13 @@ Following commands are run under the Python interpreter environment. (alternativ
 2. Import the module `rovibME` which should be in your current folder. (Directly execute the following command when using Python3)
     > import compute_spectra
 
+Available  Functions
+-------------------
+`sumofstate_H2(  T  )`
+`spectra_H2(T, J_{Stokes}, J_{anti-Stokes})`, and  similar for HD and D<sub>2</sub> Here,  temperature T  is in  Kelvin. `J_{Stokes}` and `J_{anti-Stokes})` represents  the maximum rotational J whose intensity is  to be  computed. Intensities are  computed for `J=J_{anti-Stokes},.., J_{Stokes}`. Computed  intensities are relative normalized intensities.
+
+Functions can be used directly for computing the sum of states for the three gases for given temperature (for example,  `sumofstate_D2(298)`). When computing spectra the sum of states  are computed within the function (for example, `spectra_H2(298, 6, 6)`).
+
 Output
 -------------
 
@@ -75,4 +82,4 @@ Output
  [2.73110763e-01]
  [2.14165350e-01]
  [3.08832831e-02]
- [1.33245422e-02]]```
+ [1.33245422e-02]]
