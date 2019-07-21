@@ -35,7 +35,7 @@ Output
  Sum of state for  D2 at 298 K :  32.86935389137424
 
 
->Normalized spectra H2:
+Normalized spectra H2:
  [[1.68807110e-05]
  [1.00177858e-03]
  [3.81730673e-03]
@@ -50,7 +50,7 @@ Output
  [1.58920099e-05]]
 
 
->Normalized spectra HD:
+Normalized spectra HD:
  [[4.82808002e-05]
  [6.71015239e-04]
  [6.22339903e-03]
@@ -67,7 +67,7 @@ Output
  [4.57832852e-05]]
 
 
->Normalized spectra D2 :
+Normalized spectra D2 :
  [[2.76095983e-04]
  [1.03622463e-03]
  [1.18052776e-02]
