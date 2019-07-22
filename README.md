@@ -6,20 +6,19 @@ Set of functions in Python and IgorPro's scripting language for the wavenumber (
 
  - For intensity calibration, the main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. The output is a curve extrapolated to same dimension as required by user for intensity calibration. An independent validation of the obtained sensitivity should be done for a measure of accuracy.
 
-## Principle
-
-Refer to the following research papers for the principle.
+## Method
 
 **Wavenumber calibration**
+Fit of  the reference transition wavenumbers against the band position in pixels is performed to obtain the wavenumber axis(relative).
 
   -  S. B. Kim, R. M. Hammaker, W. G. Fateley, Appl. Spectrosc. 1986, 40, 412.
   - H. Hamaguchi, Appl. Spectrosc. Rev. 1988, 24, 137.
   - R. L. McCreery, Raman Spectroscopy for Chemical Analysis, John Wiley & Sons, New
 York, 2000.
   - N. C. Craig, I. W. Levin, Appl. Spectrosc. 1979, 33, 475.
-  - H. Hamaguchi, Appl. Spectrosc. Rev. 1988, 24, 137.
 
 **Intensity calibration**
+Ratio  of intensities from common rotational states are compared to the corresponding theoretical ratio to obtain the wavelength dependent sensitivity curve.
 
   - H. Okajima, H. Hamaguchi, J. Raman Spectrosc. 2015, 46, 1140.
   - H. Hamaguchi, I. Harada, T. Shimanouchi, Chem. Lett. 1974, 3, 1405.
@@ -40,7 +39,7 @@ See specific program's readme regarding the use of the above data in the program
  - A Python module
 for performing non-linear fit on the above mentioned data set to obtain the wavelength dependent sensitivity.
 
-Additionaly, programs to compute the theoretical pure rotational Raman spectra (for H<sub>2</sub>, HD and D<sub>2</sub>) are also included.
+Additionally, programs to compute the theoretical pure rotational Raman spectra (for H<sub>2</sub>, HD and D<sub>2</sub>) are also included.
 
 
 ## Usage
@@ -57,6 +56,6 @@ Clone the repository or download the zip file. As per your choice of the program
 ## Credits
 *Non-linear optimization in SciPy* :  Travis E. Oliphant. Python for Scientific Computing, Computing in Science & Engineering, 9, 10-20 (2007), DOI:10.1109/MCSE.2007.58
 
-*Orthogonal Distance Regression as used in IgorPro and SciPy* : i) P. Boggs, R. Byrd, R. Schnabel, SIAM J. Sci. Comput. 1987, 8, 1052. ii) P. T. Boggs, J. R. Donaldson, R. h. Byrd, R. B. Schnabel, ACM Trans. Math. Softw.
+*Orthogonal Distance Regression as used in IgorPro and SciPy* : i) P. T. Boggs, R. Byrd, R. Schnabel, SIAM J. Sci. Comput. 1987, 8, 1052. ii) P. T. Boggs, J. R. Donaldson, R. h. Byrd, R. B. Schnabel, ACM Trans. Math. Softw.
 1989, 15, 348.
-16 iii) J. W. Zwolak, P. T. Boggs, L. T. Watson, ACM Trans. Math. Softw. 2007, 33, 27.
+16 iii) J. W. Zwolak, P. T. Boggs, L. T. Watson, ACM Trans. Math. Softw. 2007, 33, 27. iv)  P. T. Boggs and J. E. Rogers, “Orthogonal Distance Regression,” in “Statistical analysis of measurement error models and applications: proceedings of the AMS-IMS-SIAM joint summer research conference held June 10-16, 1989,” Contemporary Mathematics, vol. 112, pg. 186, 1990.
