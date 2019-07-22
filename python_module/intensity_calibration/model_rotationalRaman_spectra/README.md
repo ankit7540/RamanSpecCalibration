@@ -84,6 +84,7 @@ Normalized spectra D2 :
  [3.08832831e-02]
  [1.33245422e-02]]
 ```
+<br>
 
 Using  matplotlib  spectra can be plotted using the band position and the intensities. For exmaple,
 <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/python_module/intensity_calibration/model_rotationalRaman_spectra/spectra.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/python_module/intensity_calibration/model_rotationalRaman_spectra/spectra.png" width="392" height="265" />
