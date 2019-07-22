@@ -1,8 +1,9 @@
 #!/usr/bin/python
 '''Module for computing the pure rotational Raman spectra from H2, HD and D2'''
 
-import math   # This will import math module
+import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Constants ------------------------------
 K = np.float64(1.38064852e-23) # J/K
@@ -430,3 +431,51 @@ print ("\n")
 spectra_D2(298, 6, 8)
 
 #  Spectra can  be plotted using matplotlib simply using the band posn and the spectra
+
+#********************************************************************
+
+# Plotting the data :  MATPLOTLIB REQUIRED
+
+txt = ("*Generated from 'compute_spectra.py' on the\
+      \nGitHub Repository: RamanSpecCalibration ")
+
+# FIGURE 0 INITIALIZED
+
+wavenumH2= np.loadtxt("./posnH2.txt")
+wavenumHD= np.loadtxt("./posnHD.txt")
+wavenumD2= np.loadtxt("./posnD2.txt")
+
+spectraH2= np.loadtxt("./spectraH2.txt")
+spectraHD= np.loadtxt("./spectraHD.txt")
+spectraD2= np.loadtxt("./spectraD2.txt")
+
+plt.figure(0)
+ax0 = plt.axes()
+plt.title('Calculated  pure rotational Raman spectra', fontsize=17)
+
+plt.stem( wavenumH2,  spectraH2, 'r', label='$H_2$' ,  markerfmt='ro' , basefmt='k-')
+plt.stem( wavenumHD,  spectraHD, 'g', label='$HD$',  markerfmt='go', basefmt='k-')
+plt.stem( wavenumD2,  spectraD2, 'b', label='$D_2$',  markerfmt='bo', basefmt='k-')
+
+
+#plt.plot( wavenumH2,  spectraH2, 'r|',  label='wavenumber (ref)')
+#plt.plot( wavenumHD,  spectraHD, 'go',  label='wavenumber (ref)')
+#plt.plot( wavenumD2,  spectraD2, 'bo',  label='wavenumber (ref)')
+
+plt.xlabel('Wavenumber / cm-1', fontsize=16)
+plt.ylabel('Relative intensity', fontsize=16)
+plt.grid(True)
+ax0.tick_params(axis='both', labelsize =15)
+
+ax0.set_xlim([1700, -1065])
+
+ax0.minorticks_on()
+ax0.tick_params(which='minor', right='on')
+ax0.tick_params(axis='y', labelleft='on', labelright='on')
+plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey",\
+         transform=plt.gcf().transFigure)
+plt.legend(loc='upper left', fontsize=14)
+
+plt.savefig('spectra.png', bbox_inches='tight', dpi=300)
+
+#********************************************************************
