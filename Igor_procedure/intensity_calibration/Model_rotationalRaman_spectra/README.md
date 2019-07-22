@@ -27,17 +27,23 @@ After loading the  waves, use the commmands available for computing the sumofsta
 Available  Functions
 -------------------
 `sumofstate_H2(  T  )` Computing  partition function for the gases. Definition is as follows,<br>
-<img align="center" src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" width="581" height="85" />
 
-`spectra_H2(T, J_{Stokes}, J_{anti-Stokes})`, and  similar for HD and D<sub>2</sub> Here,  temperature T  is in  Kelvin. `J_{Stokes}` and `J_{anti-Stokes})` represents  the maximum rotational J whose intensity is  to be  computed. Intensities are  computed for `J=J_{anti-Stokes},.., J_{Stokes}`. Computed  intensities are relative normalized intensities.
+<p align="center">
+  <img   src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" width="581" height="85" />
+</p>
 
-Functions can be used directly for computing the sum of states for the three gases for given temperature (for example,  `sumofstate_D2(298)`). When computing spectra the sum of states  are computed within the function (for example, `spectra_H2(298, 6, 6)`).
+
+`spectra_H2(T, J_{Stokes}, J_{anti-Stokes})`, and  similar for HD and D<sub>2</sub> : for computing spectra. Here,  temperature T  is in  Kelvin. `J_{Stokes}` and `J_{anti-Stokes})` represents  the maximum rotational J whose intensity is  to be  computed. Intensities are  computed for `J=J_{anti-Stokes},.., J_{Stokes}`. Computed  intensities are relative normalized intensities.
+
+Functions can be used directly for computing the sum of states for the three gases for given temperature (for example,  `sumofstate_D2(298)`). When computing spectra the sum of states  are computed within the function (for example, `spectra_H2(298, 6, 6)`) for obtaining the Boltzmann  populations.
 
 Output
 -------------
-
-
-
+`SumOfstates_H2 ( 298 )` outputs a scalar.
+`spectra_H2 ( 298, 5  , 5 )`  outputs  three  waves, posnH2, specH2, spectraH2.
+posnH2 :  1D wave containing  the Raman transition  wavenumbers.
+specH2 :  2D wave containing  rotational  state, Raman transition  wavenumbers, relative Raman intensities  and the  transition wavenumber in  absolute  wavenumbers.
+spectraH2 :  1D wave containing  the relative Raman intensities.
 
 
 ```
@@ -47,12 +53,21 @@ Output
   49.8149
 
 •spectra_H2 ( 298, 5  , 5 )
-•spectra_HD ( 298, 5  , 5 )
-•spectra_D2 ( 298, 7  , 7 )
+•print  posnH2
+  posnH2[0]= {-1034.67,-814.424,-587.032,-354.373,354.373,587.032,814.424,1034.67,1246.1,1447.28}
 
+•print  specH2
+  specH2[0][0]= {5,4,3,2,0,1,2,3,4,5}
+  specH2[0][1]= {-1034.67,-814.424,-587.032,-354.373,354.373,587.032,814.424,1034.67,1246.1,1447.28}
+  specH2[0][2]= {0.00100178,0.00381731,0.0708816,0.0679526,0.335826,1,0.150123,0.106331,0.00464706,0.00105514}
+  specH2[0][3]= {19824.6,19604.4,19377,19144.3,18435.6,18202.9,17975.5,17755.3,17543.8,17342.7}
 
+•print  spectraH2
+    spectraH2[0]= {0.00100178,0.00381731,0.0708816,0.0679526,0.335826,1,0.150123,0.106331,0.00464706,0.00105514}
 
 ```
+
+Similarly  for HD and D<sub>2</sub>.
 <br>
 
 Using  matplotlib  spectra can be plotted using the band position and the intensities. For example,<br>
