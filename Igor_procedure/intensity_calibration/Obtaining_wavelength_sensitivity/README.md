@@ -34,18 +34,18 @@ wave dataH2   = root:dataH2
 wave dataD2  = root:dataD2
 wave dataHD  = root:dataHD
 wave dataO2_pR  = root:DataO2_p
-wave dataO2_o1s1		= root:DataO2
-// -----------------------------------------------------------------------------------------------
+wave dataO2_o1s1  = root:DataO2
+// --------------------------------------------------------------------------------------
 
 
 ```
 
-Next, create a temporary wave with  no  data, for passing  to  optimize function and  then  run the  function, `run_Opt_Linear`, `run_Opt_Quadratic` or  `run_Opt_Cubic` with guess  coefficients.
+Next, create a temporary wave (required  for passing to the optimize function)  and  then  run the  function, `run_Opt_Linear`, `run_Opt_Quadratic` or  `run_Opt_Cubic` with guess  coefficients.
 
 ```
-	make  /n=1 temp=0 // this wave is passed to the optimize function, not used in present implementation
-	run_Opt_Linear  ( temp   , 0.115   )
-  run_Opt_Quadratic  ( temp   , 0.115 , 1e-2  )
-  run_Opt_Cubic  ( temp   , 0.115 , 1e-2,  1e-4 )
+make  /n=1 temp=0 // this wave is passed to the optimize function, not used in present implementation
+run_Opt_Linear  ( temp , 0.115   )
+run_Opt_Quadratic  ( temp , 0.115 , 1e-2  )
+run_Opt_Cubic  ( temp , 0.115 , 1e-2,  1e-4 )
 ```
 Using the obtained coefficients  and the wavenumber axis  vector (1D  wave for  the  xaxis)  generate the sensitivity  curve.
