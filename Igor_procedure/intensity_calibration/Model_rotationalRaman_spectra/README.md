@@ -5,7 +5,7 @@ This section includes one file `Compute_spectra.ipf` for the computation of the 
 
 Requirements
 ----------------
-Tested with  Igor Pro  7.
+IgorPro 6.36 or  7 and higher.
 
 Usage
 ----------------
@@ -13,8 +13,8 @@ Following commands is run in  the  command browser to initialize  the procedure 
 
 ```
 rotational_analysis()
-  Folder (root:Params:RotnRamanIns)  generated. Please load the data files in the following folder.
-  root:Params:RotnRamanIns
+Folder (root:Params:RotnRamanIns)  generated. Please load the data files in the following folder.
+root:Params:RotnRamanIns
 ```
 
 Above  makes  new  folder  for keeping data for the energy of rovibrational states and the Polarizability anisotropy Matrix Elements.
@@ -22,7 +22,7 @@ Above  makes  new  folder  for keeping data for the energy of rovibrational stat
 Next,  load the data  waves to  the folder, `root:Params:RotnRamanIns`
 All the  required  data is available in the sub-directory called `energy_levels_and_gamma` as  Igor text files (.itx)
 
-After loading the  waves, use the commmands available for computing the sumofstates (Q) and relative intensities  of  rotational Raman bands of  H<sub>2</sub>, HD and D<sub>2</sub>
+After loading the  waves, use the commands available for computing the Sumofstates (Q) and relative intensities  of  rotational Raman bands of  H<sub>2</sub>, HD and D<sub>2</sub>
 
 Available  Functions
 -------------------

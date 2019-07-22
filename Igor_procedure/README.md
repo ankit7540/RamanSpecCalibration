@@ -10,14 +10,10 @@ Two broad categories :  Wavenumber  calibration and intensity calibration
 
 *Obtaining wavelength  sensitivity* : Actual fitting  functions for  linear, quadratic and cubic polynomial functions  as models for the wavelength sensitivity. `Weighted_fit_wavelength_sensitivity.ipf` includes  all  the required functions and example of data set required. See Readme in the sub-directory for more details.
 
-`compute_spectra.ipf` :
-
-
-
 
 Requirements
 ----------------
-Tetsed with IgorPro 6.36 and 7 or higher.
+IgorPro 6.36 or  7 and higher.
 
 Usage
 ----------------

@@ -4,7 +4,7 @@ This section includes one file `Weighted_fit_wavelength_sensitivity.ipf` for obt
 
 Requirements
 ----------------
-Tested with  Igor Pro  7.
+IgorPro 6.36 or  7 and higher.
 
 Usage
 ----------------
@@ -12,7 +12,7 @@ Required input data should be structured as following.
 
 2D waves with columns  containing the data as follows.
 
-|   J   |  expt  ratio |  theoretical ratio |   J+2  transition wavenumber |  J-2  transition wavenumber | weight  |
+|   J   |  Expt  ratio |  theoretical ratio |   J+2  transition wavenumber |  J-2  transition wavenumber | weight  |
 
 For example,   (header  given for  clarity). Data wave as example is included in the present directory  as file, `dataD2.txt`
 
