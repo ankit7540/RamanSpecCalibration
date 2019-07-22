@@ -26,8 +26,8 @@ After loading the  waves, use the commmands available for computing the sumofsta
 
 Available  Functions
 -------------------
-`sumofstate_H2(  T  )` Computing  partition function for the gases. Definition is as follows,
-<img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" width="854" height="125" />
+`sumofstate_H2(  T  )` Computing  partition function for the gases. Definition is as follows,<br>
+<img align="center" src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/partition_function_defn.png" width="581" height="85" />
 
 `spectra_H2(T, J_{Stokes}, J_{anti-Stokes})`, and  similar for HD and D<sub>2</sub> Here,  temperature T  is in  Kelvin. `J_{Stokes}` and `J_{anti-Stokes})` represents  the maximum rotational J whose intensity is  to be  computed. Intensities are  computed for `J=J_{anti-Stokes},.., J_{Stokes}`. Computed  intensities are relative normalized intensities.
 
