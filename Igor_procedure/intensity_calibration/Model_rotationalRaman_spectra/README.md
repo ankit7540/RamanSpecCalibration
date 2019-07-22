@@ -20,7 +20,7 @@ rotational_analysis()
 Above  makes  new  folder  for keeping data for the energy of rovibrational states and the Polarizability anisotropy Matrix Elements.
 
 Next,  load the data  waves to  the folder, `root:Params:RotnRamanIns`
-All the  required  data is available in the sub-directory called `energy_levels_and_gamma`
+All the  required  data is available in the sub-directory called `energy_levels_and_gamma` as  Igor text files (.itx)
 
 After loading the  waves, use the commmands available for computing the sumofstates (Q) and relative intensities  of  rotational Raman bands of  H<sub>2</sub>, HD and D<sub>2</sub>
 
@@ -40,6 +40,7 @@ Functions can be used directly for computing the sum of states for the three gas
 Output
 -------------
 `SumOfstates_H2 ( 298 )` outputs a scalar.
+
 `spectra_H2 ( 298, 5  , 5 )`  outputs  three  waves, posnH2, specH2, spectraH2.
 posnH2 :  1D wave containing  the Raman transition  wavenumbers.
 specH2 :  2D wave containing  rotational  state, Raman transition  wavenumbers, relative Raman intensities  and the  transition wavenumber in  absolute  wavenumbers.
@@ -70,7 +71,7 @@ spectraH2 :  1D wave containing  the relative Raman intensities.
 Similarly  for HD and D<sub>2</sub>.
 <br>
 
-Plot  showing modelled spectra of the three gases.
+Plot  showing modelled spectra of the three gases.</br>
 <p align="center">
-  <img   src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/Igor_plot.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/Igor_plot.png" width="581" height="85" />
+  <img   src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/Igor_plot.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/Igor_plot.png" width="598" height="385" />
 </p>
