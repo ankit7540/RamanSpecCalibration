@@ -8,7 +8,7 @@ Required input data should be structured as following.
 
 2D waves with columns  containing the data as follows.
 
-|   J   |  Expt  ratio |  theoretical ratio |   J+2  transition wavenumber  (cm<sup>-1<\sup>) |  J-2  transition wavenumber (cm<sup>-1<\sup>) | weight  |
+|   J   |  Expt  ratio |  theoretical ratio |   J+2  transition wavenumber  (cm<sup>-1</sup>) |  J-2  transition wavenumber (cm<sup>-1</sup>) | weight  |
 
 For example,   (header  given for  clarity). Data wave as example is included in the present directory  as file, `dataD2.txt`
 
