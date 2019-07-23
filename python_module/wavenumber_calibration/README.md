@@ -64,13 +64,13 @@ Fit coefs [-1.04565629e+03  2.01636951e+00 -2.12196552e-04  1.85233049e-08]
 Matplotlib is used to generate the plots of fit and  residuals.
 
 <p align="center">
-  <img src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fit_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fit_py.png" width="392" height="265" />
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_py.png" width="392" height="265" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fitResdy_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fitResdy_py.png" width="392" height="265" />
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fitResdy_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fitResdy_py.png" width="392" height="265" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fitResdx_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/tree/master/img/wavenum_calbr_fitResdx_py.png" width="392" height="265" />
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fitResdx_py.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fitResdx_py.png" width="392" height="265" />
 </p>
