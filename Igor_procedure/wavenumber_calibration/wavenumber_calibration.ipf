@@ -20,14 +20,15 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 
 	nRows  = dimsize (pixel_posn, 0) 
 	
-	make /o /n=(nRows) residual_y, residual_x
+	make /d  /o /n=(nRows) residual_y, residual_x
+	make /d /o /n=4 initCoef={  -1045  ,  1.5  , -1e-4  ,1e-008  }
 	
-	CurveFit /ODR=2   poly 4 , ref_wave /X=pixel_posn  /W=ref_error   /XW=pixel_error   /I=1 /D /R=residual_y  /XR=residual_x 
-	wave W_coef
+	CurveFit /ODR=2   poly 4 ,  kwCWave=initCoef  , ref_wave /X=pixel_posn  /W=ref_error   /XW=pixel_error   /I=1 /D /R=residual_y  /XR=residual_x 
+	wave  initCoef
 	
-	make  /o /n=(nPoints)   fit  = poly(W_coef, p )
+	make /d /o /n=(nPoints)   fit  = poly( initCoef , p )
 	
-	make  /o /n=(nPoints)   pixel_x = p
+	make  /d /o /n=(nPoints)   pixel_x = p
 	
 	
 	variable yr_min = abs(  wavemin (residual_y) )
@@ -117,7 +118,8 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 	ModifyGraph tlblRGB(l1)=(1,16019,65535),tlblRGB(r1)=(65535,21845,0)  
 	ModifyGraph alblRGB(l1)=(1,16019,65535),alblRGB(r1)=(65535,21845,0)
 	Legend/C/N=text1/A=RB
-	
+	ModifyGraph manTick(r1)={0,0.1,0,1},manMinor(r1)={0,50}
+	ModifyGraph zero(l1)=1,axRGB(l1)=(0,0,0)	
 	
 	duplicate  /o  fit,  Wavenumber_axis
 	
