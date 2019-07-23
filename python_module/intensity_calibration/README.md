@@ -58,4 +58,5 @@ If using Python3, directly import as
     > import wavelength_sensitivity
 
 ***When using Python IDE like Spyder***
+
 1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as numpy array. Open the  file in the IDE and make changes  to the file path if required. Run the code.
