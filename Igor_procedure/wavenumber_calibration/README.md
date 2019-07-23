@@ -26,7 +26,7 @@ wavenumber_fit ( wavenum_reference,
 
 `num_pixel_on_CCD`        =   variable,  number of pixels  on the CCD,  for example, 1024, 1340  or 1600. This is used for generating  the wavenumber (relative) axis.
 
-The four 1D waves  should have same number  of data points. For errors,  1\sigma   	\alpha   	$\alpha$
+The four 1D waves  should have same number  of data points. For errors,  1 sigma or 3  sigma error in  reference  and pixel  positions can be included. None of the  values in the error  waves  should be zero. If the error is really  small make it something like 1e-5.
 
 Example
 -------------------

@@ -11,7 +11,9 @@ Four 1D numpy arrays are required.
   - band positions in pixels
   - error in band  positions  
 
-In the present exmaple, these are included as `freq.txt`, `freq_sigma.txt`, `pixel.txt` and `pixel_sigma.txt`  
+In the present example, these are included as `freq.txt`, `freq_sigma.txt`, `pixel.txt` and `pixel_sigma.txt`  
+
+The four 1D arrays  should have same number  of data points. For errors,  1 sigma or 3  sigma error in  reference  and pixel  positions can be included. None of the  values in the error  waves  should be zero. If the error is really  small make it something like 1e-5.
 
 
 
@@ -25,7 +27,7 @@ Following commands are run under the Python interpreter environment. (Alternativ
 
 ***When using Python interpreter in terminal***
 
-1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as numpy array. If required, change the path to the data files in the code.  
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as NumPy array. If required, change the path to the data files in the code.  
 
 2. Import the python module. If  using python 2.7 add the current folder to path allowing to import the module in the current folder.
     > import sys
@@ -37,7 +39,7 @@ If using Python3, directly import as
 
 ***When using Python IDE like Spyder***
 
-1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as numpy array. Open the  file in the IDE and make changes  to the file path if required. Run the code.
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as NumPy array. Open the  file in the IDE and make changes  to the file path if required. Run the code.
 
 Output
 ----------------
