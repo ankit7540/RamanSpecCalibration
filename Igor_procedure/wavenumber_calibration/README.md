@@ -44,3 +44,10 @@ Example
   	K2	=-0.00021219 ± 4.57e-007
   	K3	=1.8518e-008 ± 1.68e-010
 ```
+
+
+A  plot  is generated in the end as shown  below.
+
+<p align="center">
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" width="392" height="265" />
+</p>
