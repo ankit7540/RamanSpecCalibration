@@ -27,7 +27,20 @@ pixel_error = np.loadtxt("./pixel_sigma.txt")
 
 #********************************************************************
 # Fit function defined here
-def fit_func(B, x):
+def fit_func_quadratic(B, x):
+    # B is a vector of the parameters.
+    # x is an array of the current x values.
+    # x is in the same format as the x passed to Data or RealData.
+    #
+    # Return an array in the same format as y passed to Data or RealData.
+    return B[0] + B[1]*x  + B[2]*(x**2)
+
+#********************************************************************
+
+
+#********************************************************************
+# Fit function defined here
+def fit_func_cubic(B, x):
     # B is a vector of the parameters.
     # x is an array of the current x values.
     # x is in the same format as the x passed to Data or RealData.
@@ -37,11 +50,21 @@ def fit_func(B, x):
 
 #********************************************************************
 
+quadraticPolynomial = scipy.odr.Model(fit_func_quadratic)
+cubicPolynomial = scipy.odr.Model(fit_func_cubic)
 
-cubicPolynomial = scipy.odr.Model(fit_func)
 Data = scipy.odr.RealData(pixel, ref_freq ,  sx=pixel_error, sy=ref_error)
-Fit = scipy.odr.ODR(Data, cubicPolynomial, [-1000, 2,  1e-4, 1e-5])
-output = Fit.run()
+
+Fit_q = scipy.odr.ODR(Data, quadraticPolynomial, [-1000, 2,  1e-4 ])
+Fit_c = scipy.odr.ODR(Data, cubicPolynomial, [-1000, 2,  1e-4, 1e-5])
+
+
+# Cubic fit is shown here. Uncomment the line for quadratic if required.
+# Quadratic fit  needs change on line numbers: 65,66 ; 80,81 ; 83,84
+
+#output = Fit_q.run()
+output = Fit_c.run()
+
 output.pprint()
 
 ODR_result =  output.beta
@@ -51,10 +74,14 @@ ODR_resd_y = output.eps
 
 print ("\nFit coefs", ODR_result)
 
+#  For 1600  pixels on  the detector. Change 1600 to  your case if required.
 xpoints = np.arange(0, 1600, dtype=float)
-curve_cubic = fit_func( ODR_result, xpoints)
 
-wavenumber_axis = fit_func( ODR_result, xpoints)
+#fit = fit_func_quadratic( ODR_result, xpoints)
+fit = fit_func_cubic( ODR_result, xpoints)
+
+#wavenumber_axis = fit_func_quadratic( ODR_result, xpoints)
+wavenumber_axis = fit_func_cubic( ODR_result, xpoints)
 
 #print ("ODR residual in x", ODR_resd_x)
 #print ("ODR residual in y", ODR_resd_y)
@@ -72,7 +99,7 @@ plt.figure(0)
 ax0 = plt.axes()
 plt.title('Fitting result', fontsize=20)
 plt.plot( pixel,  ref_freq, 'ro',  label='wavenumber (ref)')
-plt.plot( xpoints, curve_cubic, 'b', linewidth=2, label='cubic_fit')
+plt.plot( xpoints, fit, 'b', linewidth=2, label='cubic_fit')
 
 plt.xlabel('pixel', fontsize=16)
 plt.ylabel('Wavenumber', fontsize=16)
