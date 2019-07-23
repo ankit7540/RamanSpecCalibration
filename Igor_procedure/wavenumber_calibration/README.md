@@ -4,7 +4,7 @@
 
 
 
-`data_waves.itx`  in the present  folder includes  4 waves, `freq`, `freq_sigma`, `pixel` and `pixel_sigma` which  serve as example for  using  the procedure.
+`data_waves.itx`  in the present  folder includes  4 waves, `freq`, `freq_sigma`, `pixel` and `pixel_sigma` which  serve as example for using the procedure.
 
 Usage
 ----------------
@@ -16,15 +16,15 @@ wavenumber_fit ( wavenum_reference,
                  num_pixel_on_CCD )
 
 ```
-wavenum_reference       =   1D wave, list  of  reference Raman transition wavenumbers
+`wavenum_reference`       =   1D wave, list  of  reference Raman transition wavenumbers
 
-error_in_reference      =   1D wave, error in the above Raman transition wavenumbers
+`error_in_reference`      =   1D wave, error in the above Raman transition wavenumbers
 
-band_position_in_pixel  =   1D wave, corresponding band  positions on  the CCD (in  pixel)
+`band_position_in_pixel`  =   1D wave, corresponding band  positions on  the CCD (in  pixel)
 
-error_band_posn         =   1D wave, error in the band positions
+`error_band_posn`         =   1D wave, error in the band positions
 
-num_pixel_on_CCD        =   variable,  number of pixels  on the CCD,  for example, 1024, 1340  or 1600. This is used for generating  the wavenumber (relative) axis.
+`num_pixel_on_CCD`        =   variable,  number of pixels  on the CCD,  for example, 1024, 1340  or 1600. This is used for generating  the wavenumber (relative) axis.
 
 
 Example
@@ -49,5 +49,10 @@ Example
 A  plot  is generated in the end as shown  below.
 
 <p align="center">
-  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" width="392" height="265" />
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/wavenum_calbr_fit_ig.png" width="505" height="325" />
 </p>
+
+
+Error  analysis
+-----------------------
+For  error  analysis refer to the manuscript and supplementary material.
