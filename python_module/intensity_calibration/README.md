@@ -8,11 +8,11 @@ Required input data should be structured as following.
 
 2D waves with columns  containing the data as follows.
 
-|   J   |  Expt  ratio |  theoretical ratio |   J+2  transition wavenumber |  J-2  transition wavenumber | weight  |
+|   J   |  Expt  ratio |  theoretical ratio |   J+2  transition wavenumber  (cm<sup>-1<\sup>) |  J-2  transition wavenumber (cm<sup>-1<\sup>) | weight  |
 
 For example,   (header  given for  clarity). Data wave as example is included in the present directory  as file, `dataD2.txt`
 
-| J | Expt Ratio | Theortcl  Ratio | J+2, freq | J-2, freq | Weight |
+| J | Expt Ratio | Theoretical  Ratio | J+2, freq | J-2, freq | Weight |
 |---|     ------------|-----------------      |-----------   |-----------   |--------    |
 | 2 | 2.4872     | 2.3827               | 414.65    | -179.07   | 11.67   |
 | 3 | 1.7910     | 1.6652               | 529.90    | -297.53   | 9.48    |
@@ -21,7 +21,20 @@ For example,   (header  given for  clarity). Data wave as example is included in
 | 6 | 1.2955     | 1.1287               | 859.83    | -642.81   | 3.26    |
 
 
-There are three functions for computing the residuals, `residual_linear`, `residual_quadratic` and `residual_cubic`. The  path to the data waves in the Igor experiment file is  to be modified in the function for the residual.
+There are three functions for computing the residuals, `residual_linear`, `residual_quadratic` and `residual_cubic`. The  path to the data waves in the specific usage is to be modified. See following code block,
+```
+#********************************************************************
+# Load data files
+# Modify this as user case
+dataH2 = np.loadtxt("./dataH2.txt")
+dataHD = np.loadtxt("./dataHD.txt")
+dataD2 = np.loadtxt("./dataD2.txt")
+dataO2 = np.loadtxt("./dataO2.txt")
+dataO2_p = np.loadtxt("./dataO2_p.txt")
+xaxis = np.loadtxt("./Ramanshift_axis.txt")
+
+#********************************************************************
+```
 
 
 Requirements
@@ -30,14 +43,19 @@ Python 2.7 or Python 3.x with NumPy, SciPy and math modules
 
 Usage
 ----------------
-Following commands are run under the Python interpreter environment. (alternatively use any Python IDE like Spyder, IDLE or PyCharm)
+Following commands are run under the Python interpreter environment. (Alternatively use any Python IDE like Spyder, IDLE or PyCharm). *Spyder3 is has been used while writing and debugging.*
 
+***When using Python interpreter in terminal***
 
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as numpy array. If required, change the path to the data files in the code.  
 
-1. After cloning the repository and moving in the `python-module` directory, and refer to the readme.  Prepare the required data as mentioned above and modify the path ....   (add the current folder to path allowing to import the module in the current folder; this is required for Python 2.7).
+2. Import the python module. If  using python 2.7 add the current folder to path allowing to import the module in the current folder.
     > import sys
 
     > sys.path.append("..")
 
-2. Import the module `wavelength_sensitivity` which should be in your current folder. (Directly execute the following command when using Python3)
+If using Python3, directly import as
     > import wavelength_sensitivity
+
+***When using Python IDE like Spyder***
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as numpy array. Open the  file in the IDE and make changes  to the file path if required. Run the code.
