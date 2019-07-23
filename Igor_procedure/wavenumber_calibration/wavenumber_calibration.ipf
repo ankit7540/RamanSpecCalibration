@@ -113,6 +113,10 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 	ModifyGraph useMrkStrokeRGB(residual_y)=1,useMrkStrokeRGB(residual_x)=1
 	ModifyGraph rgb(residual_x)=(65535,43688,32768),rgb(fit)=(4369,4369,4369)
 	ModifyGraph rgb(freq)=(65535,0,0)
+	ModifyGraph axRGB(l1)=(1,16019,65535),axRGB(r1)=(65535,21845,0)   
+	ModifyGraph tlblRGB(l1)=(1,16019,65535),tlblRGB(r1)=(65535,21845,0)  
+	ModifyGraph alblRGB(l1)=(1,16019,65535),alblRGB(r1)=(65535,21845,0)
+	Legend/C/N=text1/A=RB
 	
 	
 	duplicate  /o  fit,  Wavenumber_axis
