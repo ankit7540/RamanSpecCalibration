@@ -113,7 +113,7 @@ plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey",\
          transform=plt.gcf().transFigure)
 plt.legend(loc='upper left', fontsize=15)
 
-
+#plt.savefig('wavenum_calbr_fit_py.png', bbox_inches='tight', dpi=300)
 #********************************************************************
 
 ymax = np.amax(np.absolute(ODR_resd_y))
@@ -139,6 +139,7 @@ ax1.tick_params(axis='y', labelleft='on', labelright='on')
 ax1.tick_params(axis='both', labelsize =15)
 ax1.tick_params(axis='both', labelsize =15)
 
+#plt.savefig('wavenum_calbr_fitResdy_py.png', bbox_inches='tight', dpi=300)
 #********************************************************************
 
 
@@ -160,5 +161,6 @@ ax1.tick_params(axis='y', labelleft='on', labelright='on')
 ax1.tick_params(axis='both', labelsize =15)
 ax1.tick_params(axis='both', labelsize =16)
 
+#plt.savefig('wavenum_calbr_fitResdx_py.png', bbox_inches='tight', dpi=300)
 #********************************************************************
 

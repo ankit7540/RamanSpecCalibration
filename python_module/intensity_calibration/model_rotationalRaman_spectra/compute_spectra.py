@@ -476,6 +476,6 @@ plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey",\
          transform=plt.gcf().transFigure)
 plt.legend(loc='upper left', fontsize=14)
 
-plt.savefig('spectra.png', bbox_inches='tight', dpi=300)
+#plt.savefig('spectra.png', bbox_inches='tight', dpi=300)
 
 #********************************************************************
