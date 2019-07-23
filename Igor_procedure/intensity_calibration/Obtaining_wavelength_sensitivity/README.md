@@ -27,7 +27,7 @@ For example,   (header  given for  clarity). Data wave as example is included in
 
 There are three functions for computing the residuals, `Residual_Linear`, `Residual_Quadratic` and `Residual_Cubic`. The  path to the data waves in the Igor experiment file is  to be modified in the function for the residual.
 
-See following code block,
+See following code block  from  the residual  functions,
 ```
 // ---------------------- waves containing  data   for  fit------------------------------
 //  Modify the location of  the  data waves in your experiment
