@@ -13,13 +13,13 @@ import matplotlib.pyplot as plt
 
 # Load data files
 
-dataH2 = np.loadtxt("./dataH2_-1034_check.txt")
+dataH2 = np.loadtxt("./dataH2.txt")
 dataHD = np.loadtxt("./dataHD.txt")
 dataD2 = np.loadtxt("./dataD2.txt")
-dataO2 = np.loadtxt("./dataO2_sc.txt")
-dataO2_p = np.loadtxt("./dataO2_p_sc.txt")
+dataO2 = np.loadtxt("./dataO2.txt")
+dataO2_p = np.loadtxt("./dataO2_p.txt")
 
-xaxis = np.loadtxt("./Ramanshift_axis_g_para2_ED.txt")
+xaxis = np.loadtxt("./Ramanshift_axis.txt")
 
 #print(len(dataH2), len(dataHD), len(dataD2), len(dataO2))
 
@@ -30,61 +30,6 @@ scale1 = 1e4
 scale2 = 1e7
 scale3 = 1e9
 # ----------------------------------------
-
-def residual_linear(param):
-    '''Function which computes the difference between the ratio of the 'curve'
-    to the true given as 'ydata'  with that from  the function describing the
-    perturbation. Here it is modeled as a quadratic function of
-    the type, ( 1+ c1*x ) '''
-
-    c1 = param[0]
-
-	# - H2 -
-    ratio_H2 = dataH2[:, 1]/dataH2[:, 2]
-    RHS_H2 = (1.0 + c1/scale1 * dataH2[:, 3] )/ (1.0 +\
-             c1/scale1 * dataH2[:, 4] )
-
-    resd_H2 = dataH2[:, 5] * ((ratio_H2 - RHS_H2)**2)
-    #print(resd_H2)
-	# ------
-
-	# - HD -
-    ratio_HD = dataHD[:, 1]/dataHD[:, 2]
-    RHS_HD = (1.0 + c1/scale1 * dataHD[:, 3] )/ (1.0 +\
-             c1/scale1 * dataHD[:, 4] )
-
-    resd_HD = dataHD[:, 5] * ((ratio_HD - RHS_HD)**2)
-	# ------
-
-	# - D2 -
-    ratio_D2 = dataD2[:, 1]/dataD2[:, 2]
-    RHS_D2 = (1.0 + c1/scale1 * dataD2[:, 3] )/ (1.0 +\
-             c1/scale1 * dataD2[:, 4] )
-
-    resd_D2 = dataD2[:, 5] * ((ratio_D2 - RHS_D2)**2)
-	# ------
-
-	# - O2 high frequency -
-    ratio_O2 = dataO2[:, 1]/dataO2[:, 2]
-    RHS_O2 = (1.0 + c1/scale1 * dataO2[:, 3] )/ (1.0 +\
-             c1/scale1 * dataO2[:, 4] )
-
-    resd_O2 = dataO2[:, 5] * ((ratio_O2 - RHS_O2)**2)
-	# ------
-
-    # - O2 pure rotation -
-    ratio_O2p = dataO2_p[:, 1]/dataO2_p[:, 2]
-    RHS_O2p = (1.0 + c1/scale1 * dataO2_p[:, 3] )/ (1.0 +\
-             c1/scale1 * dataO2_p[:, 4] )
-
-    resd_O2p = (dataO2_p[:, 5]*2.5) * ((ratio_O2p - RHS_O2p)**2)
-	# ------
-
-
-    resd = np.sum(resd_H2) + np.sum(resd_HD) + np.sum(resd_D2) + np.sum(resd_O2)  + np.sum(resd_O2p)
-    return np.sum(resd)
-
-#********************************************************************
 
 def residual_quad(param):
     '''Function which computes the difference between the ratio of the 'curve'
@@ -137,7 +82,8 @@ def residual_quad(param):
 	# ------
 
 
-    resd = np.sum(resd_H2) + np.sum(resd_HD) + np.sum(resd_D2) + np.sum(resd_O2)  + np.sum(resd_O2p)
+    resd = np.sum(resd_H2) + np.sum(resd_HD) + np.sum(resd_D2) + np.sum(resd_O2) \
+    + np.sum(resd_O2p)
     return np.sum(resd)
 
 #********************************************************************
@@ -204,37 +150,8 @@ def residual_cubic(param):
 
 #***************************************************************
 
-# Function to  execute the fit function
+# Define the residual function
 
-#***************************************************************
-
-def run_fit_linear (init_k1 ):
-    # Intial guess
-
-    param_init = np.array([ init_k1  ])
-    print("**********************************************************")
-    #print("Testing the residual function with data")
-    print("Initial coef :  k1={0}  output = {1}".format(init_k1, \
-          (residual_linear(param_init))))
-
-
-    print("\nOptimization run     \n")
-    res = opt.minimize(residual_linear, param_init, method='Nelder-Mead', \
-                              options={'xatol': 1e-9, 'fatol': 1e-9})
-
-    print(res)
-    optk1 = res.x[0]
-    print("\nOptimized result : k1={0} \n".format(round(optk1, 6) ) )
-
-
-    correction_curve_quad = 1+(optk1/scale1)*xaxis     # generate the correction curve
-
-    np.savetxt("correction_linear.txt", correction_curve_quad, fmt='%2.8f',\
-               header='corrn_curve_linear', comments='')
-
-    print("**********************************************************")
-
-#***************************************************************
 #***************************************************************
 
 def run_fit_quad(init_k1, init_k2):
@@ -299,11 +216,10 @@ def run_fit_cubic(k1, k2, k3):
     print("**********************************************************")
 
 #***************************************************************
-run_fit_linear (0.97  )
-run_fit_quad(0.96, -0.75)
+
+run_fit_quad(0.86, -3.05)
 run_fit_cubic(0.76, -2.05, 0.050)
 
-curve_linear = np.loadtxt("./correction_linear.txt", skiprows=1)
 curve_quad = np.loadtxt("./correction_quad.txt", skiprows=1)
 curve_cubic = np.loadtxt("./correction_cubic.txt", skiprows=1)
 
@@ -322,9 +238,8 @@ txt = ("*Generated from 'polDerivative.py' on the\
 plt.figure(0)
 ax0 = plt.axes()
 plt.title('Fitting result', fontsize=23)
-#plt.plot(xaxis,  curve_linear, 'g', linewidth=3, label='quad_linear')
 plt.plot(xaxis,  curve_quad, 'r', linewidth=3, label='quad_fit')
-#plt.plot(xaxis,  curve_cubic, 'b', linewidth=3, label='cubic_fit')
+plt.plot(xaxis,  curve_cubic, 'b', linewidth=3, label='cubic_fit')
 #plt.plot(xdata, curve, 'b', linewidth=2.0)
 #plt.plot(xdata, correction_curve, 'k--', linewidth=1.5)
 
@@ -335,14 +250,14 @@ plt.ylabel('Relative sensitivity', fontsize=25)
 plt.grid(True)
 ax0.tick_params(axis='both', labelsize =24)
 plt.xlim((1755, -1120))
-ax0.set_ylim([0, 1.15]) # change this if the ydata function or perturbation is changed
+ax0.set_ylim([0, 1.25]) # change this if the ydata function or perturbation is changed
 
 ax0.minorticks_on()
 ax0.tick_params(which='minor', right='on')
 ax0.tick_params(axis='y', labelleft='on', labelright='on')
 plt.text(0.05, 0.00001, txt, fontsize=5, color="dimgrey",\
          transform=plt.gcf().transFigure)
-plt.legend(loc='lower left', fontsize=22)
+#plt.legend(loc='upper left', fontsize=24)
 
 #plt.savefig('test_NLO.png', dpi=300)
 #********************************************************************
