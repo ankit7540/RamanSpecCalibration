@@ -24,6 +24,7 @@ ref_freq = np.loadtxt("./freq.txt")
 ref_error = np.loadtxt("./freq_sigma.txt")
 pixel = np.loadtxt("./pixel.txt")
 pixel_error = np.loadtxt("./pixel_sigma.txt")
+# Change the above  file paths as your case
 
 #********************************************************************
 # Fit function defined here
@@ -37,7 +38,6 @@ def fit_func_quadratic(B, x):
 
 #********************************************************************
 
-
 #********************************************************************
 # Fit function defined here
 def fit_func_cubic(B, x):
@@ -49,6 +49,8 @@ def fit_func_cubic(B, x):
     return B[0] + B[1]*x  + B[2]*(x**2)  + B[3]*(x**3)
 
 #********************************************************************
+
+#  Define  ODR fit  model and dataset
 
 quadraticPolynomial = scipy.odr.Model(fit_func_quadratic)
 cubicPolynomial = scipy.odr.Model(fit_func_cubic)
