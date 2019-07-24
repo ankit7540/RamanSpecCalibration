@@ -5,7 +5,6 @@
 //***************************************************************************************
 //***************************************************************************************
 
-
 //  Fitting of  the reference wavenumber vs  the  band  position in pixel
 //	including the error in both y and  x
 
@@ -20,7 +19,7 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 
 	nRows  = dimsize (pixel_posn, 0)
 
-	make /d  /o /n=(nRows) residual_y, residual_x
+	make /d  /o /n=(nRows) residual_y, residual_x		// waves  for keeping  residuals
 
 	// Change the initial coefs as required
 	make /d /o /n=4 initCoef={  -1045  ,  1.5  , -1e-4  , 1e-008  }
@@ -55,14 +54,12 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 	else
 		xResd_limit = xr_min
 	endif
-	// -----------------------------------------------------
+	// ---------------------------------------------
 	// print  xResd_limit, yResd_limit
-
 
 	display ref_wave vs  pixel_posn		// Plot the fit and residuals
 	AppendToGraph/L=l1 residual_y vs pixel_posn;
 	AppendToGraph/R=r1 residual_x vs pixel_posn;
-
 
 	ModifyGraph axisEnab(left)={0,0.78}
 	ModifyGraph axisEnab(l1)={0.82,1}
@@ -104,7 +101,6 @@ function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPo
 	ModifyGraph  gridRGB(left)=(4369,4369,4369)
 	ModifyGraph gridRGB(bottom)=(4369,4369,4369)
 	ModifyGraph gridRGB(l1)=(4369,4369,4369)
-
 
 	AppendToGraph fit vs pixel_x
 	ModifyGraph lsize(fit)=2,rgb(fit)=(0,0,0)
