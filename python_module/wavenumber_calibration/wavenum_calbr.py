@@ -55,6 +55,7 @@ cubicPolynomial = scipy.odr.Model(fit_func_cubic)
 
 Data = scipy.odr.RealData(pixel, ref_freq ,  sx=pixel_error, sy=ref_error)
 
+# Change initial coefs defined below as required
 Fit_q = scipy.odr.ODR(Data, quadraticPolynomial, [-1000, 2,  1e-4 ])
 Fit_c = scipy.odr.ODR(Data, cubicPolynomial, [-1000, 2,  1e-4, 1e-5])
 
@@ -163,4 +164,3 @@ ax1.tick_params(axis='both', labelsize =16)
 
 #plt.savefig('wavenum_calbr_fitResdx_py.png', bbox_inches='tight', dpi=300)
 #********************************************************************
-
