@@ -26,7 +26,8 @@ For example,   (header  given for  clarity). Data wave as example is included in
 
 
 There are three functions for computing the residuals, `Residual_Linear`, `Residual_Quadratic` and `Residual_Cubic`. The  path to the data waves in the Igor experiment file is  to be modified in the function for the residual.
-See following code block,
+
+See following code block  from  the residual  functions,
 ```
 // ---------------------- waves containing  data   for  fit------------------------------
 //  Modify the location of  the  data waves in your experiment
@@ -36,7 +37,6 @@ wave dataHD  = root:dataHD
 wave dataO2_pR  = root:DataO2_p
 wave dataO2_o1s1  = root:DataO2
 // --------------------------------------------------------------------------------------
-
 
 ```
 
@@ -48,4 +48,4 @@ run_Opt_Linear  ( temp , 0.115   )
 run_Opt_Quadratic  ( temp , 0.115 , 1e-2  )
 run_Opt_Cubic  ( temp , 0.115 , 1e-2,  1e-4 )
 ```
-Using the obtained coefficients  and the wavenumber axis  vector (1D  wave for  the  xaxis)  generate the sensitivity  curve.
+Using the obtained coefficients  and the wavenumber axis  vector (1D  wave for  the xaxis)  generate the sensitivity curve.

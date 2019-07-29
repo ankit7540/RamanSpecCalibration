@@ -5,19 +5,27 @@ This section includes one file `compute_spectra.py` for the computation of the r
 
 Requirements
 ----------------
-Python 2.7 or Python 3.x with NumPy.
+Python 2.7 or Python 3.x with NumPy  and  matplotlib
 
 Usage
 ----------------
-Following commands are run under the Python interpreter environment. (alternatively use any Python IDE like Spyder, IDLE or PyCharm)
+Following commands are run under the Python interpreter environment. (Alternatively use any Python IDE like Spyder, IDLE or PyCharm). *Spyder3 is has been used while writing and debugging.*
 
-1. After cloning the repository and moving in the `python-module` directory, and refer to the redme. (add the current folder to path allowing to import the module in the current folder; this is required for Python 2.7).
+***When using Python interpreter in terminal***
+
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.
+
+2. Import the python module. If  using python 2.7 add the current folder to path allowing to import the module in the current folder.
     > import sys
 
     > sys.path.append("..")
 
-2. Import the module `rovibME` which should be in your current folder. (Directly execute the following command when using Python3)
+If using Python3, directly import as
     > import compute_spectra
+
+***When using Python IDE like Spyder***
+
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme. Open the file in the IDE and make changes to the file path if required. Run the code.
 
 Available  Functions
 -------------------
@@ -87,4 +95,7 @@ Normalized spectra D2 :
 <br>
 
 Using  matplotlib  spectra can be plotted using the band position and the intensities. For example,<br>
-<img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/python_module/intensity_calibration/model_rotationalRaman_spectra/spectra.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/python_module/intensity_calibration/model_rotationalRaman_spectra/spectra.png" width="392" height="265" />
+
+<p align="center">
+  <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/compute_spectra_python.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/compute_spectra_python.png" width="392" height="265" />
+</p>
