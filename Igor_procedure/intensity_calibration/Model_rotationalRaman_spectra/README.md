@@ -9,7 +9,7 @@ IgorPro 6.36 or  7 and higher.
 
 Usage
 ----------------
-Following commands is run in  the  command browser to initialize  the procedure on first run.
+Following commands is run in  the  command browser to initialize  the procedure on first run. User is suggested to go through the function `rotational_analysis()` to understand the initial setup for use of other included functions.
 
 ```
 rotational_analysis()
