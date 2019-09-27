@@ -1,4 +1,3 @@
-﻿
 #pragma rtGlobals=3		// Use modern global access method and strict wave access.
 
 
@@ -7,6 +6,7 @@
 
 //  Fitting of  the reference wavenumber vs  the  band  position in pixel
 //	including the error in both y and  x
+//      check the initial coefs, line 25 before execution or when the fit fails
 
 function  wavenumber_fit ( ref_wave, ref_error , pixel_posn , pixel_error ,  nPoints)
 	wave ref_wave		//	reference wavenumber
