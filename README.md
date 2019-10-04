@@ -1,6 +1,6 @@
 # RamanSpecCalibration [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3364647.svg)](https://doi.org/10.5281/zenodo.3364647)
 
-Set of functions in Python and IgorPro's scripting language for the wavenumber calibration (x-axis) and intensity calibration ( or correction of wavelength dependent sensitivity, i.e. y-axis) of Raman spectra. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. Programs in Python and IgorPro are independent and perform the same job.
+Set of functions in Python and IgorPro's scripting language for the wavenumber calibration (x-axis) and intensity calibration (or correction of wavelength dependent sensitivity, i.e. y-axis) of Raman spectra. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. Programs in Python and IgorPro are independent and perform the same job.
 
  - For wavenumber calibration, the pixel positions with error of rotational Raman bands from H<sub>2</sub>, HD, D<sub>2</sub> and rotation-vibration bands from O<sub>2</sub> are required, which can be obtained from band fitting. The code does Weighted Orthogonal Distance Regression (weighted ODR) for fitting x-y data pair ( corresponding to pixel - reference wavenumber), both having uncertainties, with a polynomial. Output are the obtained wavenumber axis from fit and an  estimate of error.
 
