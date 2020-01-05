@@ -51,8 +51,9 @@ scale3 = 1e9
 # ----------------------------------------
 
 # these are used for scaling the weights for O2 is needed
-scale_O2_S1O1 = 0.20
-scale_O2_pureRotn= 0.035
+# edit as needed
+scale_O2_S1O1 = 2.0
+scale_O2_pureRotn= 0.1
 # ----------------------------------------
 
 log.info("Scaling factor for coefs: \n\t for c1 = %3.3e\n\t for c2 = %3.3e\n\t for c3 = %3.3e", scale1, scale2, scale3)
@@ -364,7 +365,8 @@ run_fit_cubic(0.76, -2.05, 0.050)
 run_fit_cubic(0.76, 1.205, 0.065)
 run_fit_cubic(-0.176, -0.05, 0.075)
 
-# run again with new guess
+# Final run with better guesses from previous runs
+# edit the following guess values accordingly
 run_fit_linear( -1.63 )
 run_fit_quadratic(-1.06, -0.95)
 run_fit_cubic(-1.04, -1.21, 0.0130)
