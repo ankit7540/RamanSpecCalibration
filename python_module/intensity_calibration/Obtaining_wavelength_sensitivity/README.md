@@ -21,7 +21,9 @@ For example,   (header  given for  clarity). Data wave as example is included in
 | 6 | 1.2955     | 1.1287               | 859.83    | -642.81   | 3.26    |
 
 
-There are three functions for computing the residuals, `residual_linear`, `residual_quadratic` and `residual_cubic`. The  path to the data waves in the specific usage is to be modified. See following code block,
+Header should be absent in the data files. If header are kep, then edit line numbers  39-44 and add 'skiprows' argument. See numpy.loadtxt for details.
+
+There are four functions for computing the residuals, `residual_linear`, `residual_quadratic`, `residual_cubic` and `residual_quartic`. The  path to the data waves in the specific usage is to be modified. See following code block in the python file,
 ```
 #********************************************************************
 # Load data files
