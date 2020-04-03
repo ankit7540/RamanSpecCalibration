@@ -39,12 +39,18 @@ log.error("------------ Run log ------------\n")
 # Modify this as user case
 # by default no header should be present
 # if header present, add 'skiprows=n' as on line 494
+
+# For structure of data in the input file refer to the readme in the
+#  directory containing this file
 dataH2 = np.loadtxt("./dataH2.txt")
 dataHD = np.loadtxt("./dataHD.txt")
 dataD2 = np.loadtxt("./dataD2.txt")
 dataO2 = np.loadtxt("./DataO2.txt")
 dataO2_p = np.loadtxt("./DataO2_pR.txt")
 xaxis = np.loadtxt("./Wavenumber_axis.txt")
+
+# Go to around line 482 for examples of
+#  using the above data for fitting
 
 #********************************************************************
 
@@ -495,6 +501,9 @@ run_fit_quadratic(-1.06, -0.95)
 run_fit_cubic(-1.04, -1.21, 0.0130)
 run_fit_quartic(-0.006, +0.05, -0.075, 0.0001 )
 
+# Log file generated contains summary of all fits
+# the log file will have date and time stamp
+
 # Load the saved correction curves for  plotting
 # outputs from last run will be loaded
 correction_line = np.loadtxt("./correction_linear.txt", skiprows=1)
@@ -540,3 +549,6 @@ plt.legend(loc='lower left', fontsize=16)
 #  For saving the plot
 #plt.savefig('fit_output.png', dpi=120)
 #********************************************************************
+
+# Log file generated contains summary of all fits
+# the log file will have date and time stamp
