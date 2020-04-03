@@ -222,9 +222,9 @@ def spectra_H2(T, Js, Jas):
         gamma = ME_H2_532[i+1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specH2[(Jas-1)+i][0] = i
         specH2[(Jas-1)+i][1] = position
@@ -245,9 +245,9 @@ def spectra_H2(T, Js, Jas):
         gamma = ME_H2_532[i-1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specH2[Jas-i][0] = i
         specH2[Jas-i][1] = position
@@ -296,9 +296,9 @@ def spectra_HD(T, Js, Jas):
         gamma = ME_HD_532[i+1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specHD[(Jas-1)+i][0] = i
         specHD[(Jas-1)+i][1] = position
@@ -319,9 +319,9 @@ def spectra_HD(T, Js, Jas):
         gamma = ME_HD_532[i-1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specHD[Jas-i][0] = i
         specHD[Jas-i][1] = position
@@ -369,9 +369,9 @@ def spectra_D2(T, Js, Jas):
         gamma = ME_D2_532[i+1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specD2[(Jas-1)+i][0] = i
         specD2[(Jas-1)+i][1] = position
@@ -392,9 +392,9 @@ def spectra_D2(T, Js, Jas):
         gamma = ME_D2_532[i-1][2]
 
         if i % 2 == 0:
-            factor = popn*g_even*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_even*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
         else:
-            factor = popn*g_odd*bj*omega_sc*((omega_sc-position/1e4)**3) *(gamma**2)/sos
+            factor = popn*g_odd*bj*omega_sc*(((omega-position)/1e4)**3) *(gamma**2)/sos
 
         specD2[Jas-i][0] = i
         specD2[Jas-i][1] = position
@@ -453,9 +453,12 @@ plt.figure(0)
 ax0 = plt.axes()
 plt.title('Calculated  pure rotational Raman spectra', fontsize=17)
 
-plt.stem( wavenumH2,  spectraH2, 'r', label='$H_2$' ,  markerfmt='ro' , basefmt='k-')
-plt.stem( wavenumHD,  spectraHD, 'g', label='$HD$',  markerfmt='go', basefmt='k-')
-plt.stem( wavenumD2,  spectraD2, 'b', label='$D_2$',  markerfmt='bo', basefmt='k-')
+plt.stem( wavenumH2,  spectraH2, 'r', label='$H_2$' , \
+         markerfmt='ro' , basefmt='k-', use_line_collection='true')
+plt.stem( wavenumHD,  spectraHD, 'g', label='$HD$', \
+         markerfmt='go', basefmt='k-',  use_line_collection='true')
+plt.stem( wavenumD2,  spectraD2, 'b', label='$D_2$', \
+         markerfmt='bo', basefmt='k-', use_line_collection='true')
 
 
 #plt.plot( wavenumH2,  spectraH2, 'r|',  label='wavenumber (ref)')
