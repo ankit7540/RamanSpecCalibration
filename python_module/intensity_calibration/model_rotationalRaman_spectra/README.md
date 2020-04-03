@@ -1,6 +1,6 @@
 # Theoretical intensities  for rotational Raman  bands of H<sub>2</sub>, HD and D<sub>2</sub>
 
-This section includes one file `compute_spectra.py` for the computation of the rotational Raman intensities of the three gases. Temperature is required  for computing the Boltzmann population. Wavelength dependent polarizability anisotropy matrix elements are required for the transition probability of the rotational Raman transitions. As an example, the data for the 532.199323 nm, specific to our experiment, was obtained  from  this repository (<https://github.com/ankit7540/H2-PolarizabilityMatrixElements>),  will be used here.
+This section includes one file `compute_spectra.py` for the computation of the rotational Raman intensities of the three gases. Temperature is required to be input  for computing the Boltzmann population. Wavelength dependent polarizability anisotropy matrix elements are required for the transition probability of the rotational Raman transitions. As an example, the data for the 532.199323 nm, specific to our experiment, was obtained  from  this repository (<https://github.com/ankit7540/H2-PolarizabilityMatrixElements>), and will be used here.
 
 
 Requirements
@@ -9,7 +9,7 @@ Python 2.7 or Python 3.x with NumPy  and  matplotlib
 
 Usage
 ----------------
-Following commands are run under the Python interpreter environment. (Alternatively use any Python IDE like Spyder, IDLE or PyCharm). *Spyder3 is has been used while writing and debugging.*
+Following commands are run under the Python interpreter environment. (Alternatively use any Python IDE like Spyder, IDLE or PyCharm). *Spyder running on Python 3.6 is has been used while writing and debugging.*
 
 ***When using Python interpreter in terminal***
 

@@ -4,7 +4,7 @@ This module is broadly divided  into two sections , intensity and wavenumber cal
 
 **Intensity  calibration :**  Includes following files,
 
-`compute_spectra.py` : This is an independent module which imports energy state data (for H<sub>2</sub>, HD and D<sub>2</sub>) along with ratio of polarizability anisotropy matrix (at 532.2 nm) elements to compute the theoretical rotational Raman spectra of these gases. Temperature is included for Boltzmann population using which observable Raman spectra can be modeled. For obtaining the ratio of theoretical Raman intensities originating from a common rotational state (required for the `wavelength_sensivity.py` module ), taking a ratio of the computed intensities from common  rotational  states is required. This ratio is independent of the  Boltzmann  population.
+`compute_spectra.py` : This is an independent module which imports energy state data (for H<sub>2</sub>, HD and D<sub>2</sub>) along with ratio of polarizability anisotropy matrix  elements (at 532.2 nm, for our experiment) to compute the theoretical rotational Raman spectra of these gases. Temperature is included for Boltzmann population using which observable Raman spectra can be modeled. For obtaining the ratio of theoretical Raman intensities originating from a common rotational state (required for the `wavelength_sensivity.py` module ), taking a ratio of the computed intensities from common  rotational  states is required. This ratio is independent of the  Boltzmann  populations.
 
 For matrix elements of polarizability anisotropy for H<sub>2</sub>, HD and D<sub>2</sub>, at other wavelengths refer to this GitHub repository (<https://github.com/ankit7540/H2-PolarizabilityMatrixElements>) and research paper (<https://aip.scitation.org/doi/abs/10.1063/1.5011433>).
 
@@ -12,7 +12,7 @@ For matrix elements of polarizability anisotropy for H<sub>2</sub>, HD and D<sub
 
 **Wavenumber calibration :**  Includes following file,
 
-`wavenumber_cal.py` : It requires data on the band positions in pixels with the uncertainties, as vectors in a 1D txt file. (NumPy array can be directly used as well). Core program is just fitting the pixel with the reference wavelength data. The reference data in already included in the file with the error.
+`wavenumber_cal.py` : It requires data on the band positions in pixels with the uncertainties, as vectors in a 1D txt file. (NumPy array can be directly used as well). Corresponding reference data is also required as 1D arrays containing values and the errors. Core program is just fitting the pixel with the reference wavelength data. Example data sets are included.
 
 
 Requirements
