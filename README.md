@@ -3,9 +3,9 @@
 
 ----
 This work has been published in the following article:<br><br>
-Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub><br> 
+**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br> 
 Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
-Journal of Raman Spectroscopy<br>
+*Journal of Raman Spectroscopy*<br>
 [10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
 
 ----
@@ -72,3 +72,12 @@ Clone the repository or download the zip file. As per your choice of the program
 
 ## Support/Questions/Issues
 Please use "Issues" section for asking questions and reporting issues.
+
+----
+This work has been published in the following article:<br><br>
+**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br> 
+Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
+*Journal of Raman Spectroscopy*<br>
+[10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
+
+----
