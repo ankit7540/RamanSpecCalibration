@@ -1,4 +1,14 @@
-# RamanSpecCalibration [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3364647.svg)](https://doi.org/10.5281/zenodo.3364647)
+# RamanSpecCalibration <br>
+[Link to the article](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)  |  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3364647.svg)](https://doi.org/10.5281/zenodo.3364647)
+
+----
+This work has been published in the following article:<br><br>
+Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub><br> 
+Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
+Journal of Raman Spectroscopy<br>
+[10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
+
+----
 
 Set of functions in Python and IgorPro's scripting language for the wavenumber calibration (x-axis) and intensity calibration (or correction of wavelength dependent sensitivity, i.e. y-axis) of Raman spectra. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. Programs in Python and IgorPro are independent and perform the same job.
 
