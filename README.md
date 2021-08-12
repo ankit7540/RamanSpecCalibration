@@ -107,3 +107,8 @@ Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 [10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
 
 ----
+
+
+**Other repositories on this topic :**
+
+[IntensityCalbr](https://github.com/ankit7540/IntensityCalbr) and the article ([JRS.6221](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221))
