@@ -20,7 +20,7 @@ Set of functions in Python and IgorPro's scripting language for the wavenumber c
 
 ## Why we are doing this?
 
-*Intensity calibration *
+*Intensity calibration*
 
 In any Raman spectrometer, light scattered by the molecules travels to the detector while passing through/by some optical components (for example, lens, mirrors, grating, etc..) In this process, the scattered light intensity is modulated by the non-uniform reflectance/transmission of the optical components. Reflectance and transmission of the optics are wavenumber dependent.
 The net modulation to the light intensity, defined as <i>M</i>(&nu;), over the studied spectral range can be expressed as product(s) of  the wavenumber dependent performance of the i<sup>th</sup> optical element as
