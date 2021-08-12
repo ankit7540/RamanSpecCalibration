@@ -16,6 +16,32 @@ Set of functions in Python and IgorPro's scripting language for the wavenumber c
 
  - For intensity calibration, the main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. The output is a curve extrapolated to same dimension as required by user for intensity calibration. An independent validation of the obtained sensitivity should be done for a measure of accuracy.
 
+---
+
+## Why we are doing this?
+
+*Intensity calibration *
+
+In any Raman spectrometer, light scattered by the molecules travels to the detector while passing through/by some optical components (for example, lens, mirrors, grating, etc..) In this process, the scattered light intensity is modulated by the non-uniform reflectance/transmission of the optical components. Reflectance and transmission of the optics are wavenumber dependent.
+The net modulation to the light intensity, defined as <i>M</i>(&nu;), over the studied spectral range can be expressed as product(s) of  the wavenumber dependent performance of the i<sup>th</sup> optical element as
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{200}&space;\large&space;M(\nu)&space;=&space;\Pi&space;c_{i}w_{i}(\nu)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{200}&space;\large&space;M(\nu)&space;=&space;\Pi&space;c_{i}w_{i}(\nu)" title="\large M(\nu) = \Pi c_{i}w_{i}(\nu)" /></a>
+
+Here, <i>c<sub>i</sub></i> is a coefficient and <i>w<sub>i</sub>(&nu;)</i> is the wavenumber dependent transmission or reflectance of the i<sup>th</sup> optical component.
+
+In most cases, determining the individual performance of each optical element is a cumbersome task. Hence, we limit our focus to approximately determine the relative form of <i>M</i>(&nu;), from experimental data. By relative form, it is meant that <i>M</i>(&nu;) is normalized to unity within the studied spectral range. If <i>M</i>(&nu;) is known, then we can correct the observed intensities in the Raman spectrum by dividing those by <i>M</i>(&nu;). In general, this is the principle of all intensity calibration procedure in optical spectroscopy.
+
+In our work, we assume <i>M</i>(&nu;) &cong; C<sub>1</sub>(&nu;) C<sub>2</sub>(&nu;) / C<sub>0</sub>(&nu;) [The wavenumber dependence in not explicitly stated when C<sub>0</sub>, C<sub>1</sub> and C<sub>2</sub> are discussed in the following text. ]  The three contributions, C<sub>0</sub>(&nu;) to C<sub>2</sub>(&nu;)  are determined in two steps in this analysis.
+
+- In the first step, (C<sub>0</sub> / C<sub>1</sub>) correction are determined using the wavenumber axis and the spectrum of a broad band white light source. [(See example)](https://github.com/ankit7540/IntensityCalbr/blob/master/PythonModule/determine_C0_C1_correction/Examples/Example_for_C0_C1.ipynb)
+- C<sub>2</sub> is determined from the observed Raman intensities, where the reference or true intensities are known or can be computed. This can be done using (i) pure-rotational Raman bands of molecular hydrogen and isotopologues, (ii) vibration-rotation Raman bands of the same gases and (iii) vibrational Raman bands of some liquids.
+
+The multiplicative correction to the Raman spectrum for intensity calibration is then : (C<sub>0</sub> / C<sub>1</sub>C<sub>2</sub>)
+
+---
+
+
+
 ## Method
 
 **Wavenumber calibration :**
