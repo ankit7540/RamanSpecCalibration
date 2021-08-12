@@ -12,9 +12,9 @@ Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 
 Set of functions in Python and IgorPro's scripting language for the wavenumber calibration (*x*-axis) and intensity calibration (or correction of wavelength dependent sensitivity, i.e. y-axis) of Raman spectra. This repository requires the data on the rotational state (J), frequency, and the measured rotational Raman intensities from H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. Programs in Python and IgorPro are independent and perform the same job.
 
- - For wavenumber calibration, the pixel positions with error of rotational Raman bands from H<sub>2</sub>, HD, D<sub>2</sub> and rotation-vibration bands from O<sub>2</sub> are required, which can be obtained from band fitting. The code does Weighted Orthogonal Distance Regression (weighted ODR) for fitting x-y data pair ( corresponding to pixel - reference wavenumber), both having uncertainties, with a polynomial. Output are the obtained wavenumber axis from fit and an  estimate of error.
+ - For **wavenumber calibration**, the pixel positions with error of rotational Raman bands from H<sub>2</sub>, HD, D<sub>2</sub> and rotation-vibration bands from O<sub>2</sub> are required, which can be obtained from band fitting. The code does Weighted Orthogonal Distance Regression (weighted ODR) for fitting x-y data pair ( corresponding to pixel - reference wavenumber), both having uncertainties, with a polynomial. Output are the obtained wavenumber axis from fit and an  estimate of error.
 
- - For intensity calibration, the main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. The output is a curve extrapolated to same dimension as required by user for intensity calibration. An independent validation of the obtained sensitivity should be done for a measure of accuracy.
+ - For **intensity calibration**, the main scheme of the code is for the non-linear weighted minimization to obtain coefficients for a polynomial which represents the wavelength dependent sensitivity. The output is a curve extrapolated to same dimension as required by user for intensity calibration. An independent validation of the obtained sensitivity should be done for a measure of accuracy.
 
 ---
 
@@ -37,6 +37,8 @@ In our work, we assume <i>M</i>(&nu;) &cong; C<sub>1</sub>(&nu;) C<sub>2</sub>(&
 - C<sub>2</sub> is determined from the observed Raman intensities, where the reference or true intensities are known or can be computed. This can be done using (i) pure-rotational Raman bands of molecular hydrogen and isotopologues, (ii) vibration-rotation Raman bands of the same gases and (iii) vibrational Raman bands of some liquids.
 
 The multiplicative correction to the Raman spectrum for intensity calibration is then : (C<sub>0</sub> / C<sub>1</sub>C<sub>2</sub>)
+
+The present work is concerned with the anti-Stokes and Stokes region (from -1100 to 1650 cm<sup>-1</sup>). For a similar analysis for the higher wavenumber region (from 2300 to 4200 cm<sup>-1</sup>) see this [repository](https://github.com/ankit7540/IntensityCalbr) and [article](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221).
 
 ---
 
@@ -111,4 +113,5 @@ Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 
 **Other repositories on this topic :**
 
-[IntensityCalbr](https://github.com/ankit7540/IntensityCalbr) and the article ([JRS.6221](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221))
+This repository is concerned with the anti-Stokes and Stokes region spanning from -1040 to 1700 cm<sup>-1</sup> using H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. The 
+online repository [IntensityCalbr](https://github.com/ankit7540/IntensityCalbr) and the article ([(JRS.6221)](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221)) are concerned with the higher wavenumber region (from 2300 to 4200 cm<sup>-1</sup>).
