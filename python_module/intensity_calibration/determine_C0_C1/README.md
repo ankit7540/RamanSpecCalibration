@@ -7,7 +7,7 @@ Here, the C<sub>0</sub> correction is obtained from the wavenumber axis supplied
 
 ---
 
-For a similar program written in IgorPro see [gen_correction.ipf](https://github.com/ankit7540/RamanSpec_BasicOperations/blob/master/intensity_corr/) in my other repository.
+For a similar program written in IgorPro see [gen_correction.ipf](https://github.com/ankit7540/RamanSpecCalibration/tree/master/Igor_procedure/intensity_calibration/determine_C0_C1) in this repository.
 
 
 ## Requirements
@@ -67,7 +67,7 @@ Python 3.6 or higher with numpy, scipy and matplotlib modules.
 
 ## Examples
 
-Check this jupyter notebook showing an example with data. [Examples/Example_for_C0_C1.ipynb](https://github.com/ankit7540/IntensityCalbr/blob/master/PythonModule/determine_C0_C1_correction/Examples/Example_for_C0_C1.ipynb)
+Check this jupyter notebook showing an example with data. [Examples/Example_for_C0_C1.ipynb](https://github.com/ankit7540/RamanSpecCalibration/blob/master/python_module/intensity_calibration/determine_C0_C1/Examples/Example_for_C0_C1.ipynb)
 
 ### loading files
 
