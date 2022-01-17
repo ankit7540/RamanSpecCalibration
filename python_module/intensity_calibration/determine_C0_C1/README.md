@@ -12,7 +12,7 @@ For a similar program written in IgorPro see [gen_correction.ipf](https://github
 
 ## Requirements
 
-Python 3.6 or higher with numpy, scipy and matplotlib modules.
+Python 3.6 or higher with `numpy`, `scipy` and `matplotlib` modules.
 
 
 ## Function

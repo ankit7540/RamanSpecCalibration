@@ -21,4 +21,4 @@ Python 2.7 or Python 3.x with NumPy, SciPy, math and matplotlib modules.
 
 Usage
 ----------------
-Following commands are run under the Python interpreter environment. Alternatively use any Python IDE like Spyder, IDLE or PyCharm). IDE are best suited since the obtained results can be immediately viewed using the matplotlib plots.
+Following commands are run under a Python interpreter environment. Alternatively, one can use any Python IDE like Spyder, IDLE or PyCharm). IDE are best suited since the obtained results can be immediately viewed using the matplotlib plots.

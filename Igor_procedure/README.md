@@ -13,7 +13,7 @@ Two broad categories :  Wavenumber  calibration and intensity calibration
 
 Requirements
 ----------------
-IgorPro 6.36 or  7 and higher.
+IgorPro 6.36 or higher.
 
 Usage
 ----------------

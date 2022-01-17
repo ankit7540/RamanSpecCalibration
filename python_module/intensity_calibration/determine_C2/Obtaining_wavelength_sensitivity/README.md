@@ -21,7 +21,7 @@ For example,   (header  given for  clarity). Data wave as example is included in
 | 6 | 1.2955     | 1.1287               | 859.83    | -642.81   | 3.26    |
 
 
-Header should be absent in the data files. If header are kep, then edit line numbers  39-44 and add 'skiprows' argument. See numpy.loadtxt for details.
+Header should be absent in the data files. If header are kep, then edit line numbers  39-44 and add 'skiprows' argument. See `numpy.loadtxt` for details.
 
 There are four functions for computing the residuals, `residual_linear`, `residual_quadratic`, `residual_cubic` and `residual_quartic`. The  path to the data waves in the specific usage is to be modified. See following code block in the python file,
 ```
@@ -41,7 +41,7 @@ xaxis = np.loadtxt("./Ramanshift_axis.txt")
 
 Requirements
 ----------------
-Python 2.7 or Python 3.x with NumPy, SciPy and math modules
+Python 2.7 or Python 3.x with `NumPy`, `SciPy` and `math` modules
 
 Usage
 ----------------
@@ -67,4 +67,4 @@ If using Python3, directly import as
 
 ***When using Python IDE like Spyder***
 
-1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as NumPy array. Open the  file in the IDE and make changes  to the file path if required. Run the code.
+1. After cloning the repository and moving in the `python-module` directory,  refer to the readme.  Prepare the required data as mentioned above which will be loaded in the module  as NumPy arrays. Open the  file in the IDE and make changes  to the file path if required. Run the code.

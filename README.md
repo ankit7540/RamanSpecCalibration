@@ -3,7 +3,7 @@
 
 ----
 This work has been published in the following article:<br><br>
-**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br> 
+**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br>
 Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 *Journal of Raman Spectroscopy*<br>
 [10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
@@ -103,7 +103,7 @@ Please use "Issues" section for asking questions and reporting issues.
 
 ----
 This work has been published in the following article:<br><br>
-**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br> 
+**Toward standardization of Raman spectroscopy: Accurate wavenumber and intensity calibration using rotational Raman spectra of H<sub>2</sub>, HD, D<sub>2</sub>, and vibration–rotation spectrum of O<sub>2</sub>**<br>
 Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 *Journal of Raman Spectroscopy*<br>
 [10.1002/jrs.5955](https://onlinelibrary.wiley.com/doi/full/10.1002/jrs.5955)
@@ -113,5 +113,11 @@ Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
 
 **Other repositories on this topic :**
 
-This repository is concerned with the anti-Stokes and Stokes region spanning from -1040 to 1700 cm<sup>-1</sup> using H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. The 
-online repository [IntensityCalbr](https://github.com/ankit7540/IntensityCalbr) and the article ([JRS.6221](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221)) are concerned with the higher wavenumber region (from 2300 to 4200 cm<sup>-1</sup>).
+The present repository is concerned with the anti-Stokes and Stokes region spanning from -1040 to 1700 cm<sup>-1</sup> using H<sub>2</sub>, HD, D<sub>2</sub> and O<sub>2</sub>. In a different work,  spectral region in the higher wavenumber(from 2300 to 4200 cm<sup>-1</sup>) was investigated.
+
+**Accurate intensity calibration of multichannel spectrometers using Raman intensity ratios**<br>
+Ankit Raj, Chihiro Kato, Henryk A. Witek and Hiro‐o Hamaguchi<br>
+*Journal of Raman Spectroscopy*<br>
+[10.1002/jrs.6221](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221)
+
+See online repository [IntensityCalbr](https://github.com/ankit7540/IntensityCalbr) and the above article ([JRS.6221](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jrs.6221)) for more details.

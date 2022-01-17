@@ -5,7 +5,7 @@ This section includes one file `compute_spectra.py` for the computation of the r
 
 Requirements
 ----------------
-Python 2.7 or Python 3.x with NumPy  and  matplotlib
+Python 2.7 or Python 3.x with `NumPy`  and  `matplotlib`
 
 Usage
 ----------------
@@ -100,7 +100,7 @@ Normalized spectra D2 :
 ```
 <br>
 
-Using  matplotlib  spectra can be plotted using the band position and the intensities. For example,<br>
+Using  `matplotlib`, the  spectra can be plotted using the band position and the intensities. For example,<br>
 
 <p align="center">
   <img src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/compute_spectra_python.png" data-canonical-src="https://github.com/ankit7540/RamanSpecCalibration/blob/master/img/compute_spectra_python.png" width="392" height="265" />

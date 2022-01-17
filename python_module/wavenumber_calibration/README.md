@@ -19,7 +19,7 @@ The four 1D arrays  should have same number  of data points. For errors,  1 sigm
 
 Requirements
 ----------------
-Python 2.7 or Python 3.x with NumPy  and SciPy modules
+Python 2.7 or Python 3.x with `NumPy`  and `SciPy` modules
 
 Usage
 ----------------
